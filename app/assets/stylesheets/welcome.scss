@@ -1,3 +1,45 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.scss.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.monster-body{
+  background-image: url("puppetBits/body.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 80vh;
+}
+
+.monster-making{
+  background-color: white;
+  margin: 20px;
+}
+
+.draggable{
+  margin: 10%;
+  border-radius: 0.75em;
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+#drag-me::before {
+  content: "#" attr(id);
+  font-weight: bold;
+}
+
+.resize-drag {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.resize-container {
+  width: 100%;
+}
+
+.draggable img{
+  width: 100%;
+}
+
+.col-sm-8{
+  z-index: 0;
+}
+
+.col-sm-2{
+  z-index: 1;
+}

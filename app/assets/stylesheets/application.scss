@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 body{
   font-family: 'Raleway', sans-serif;
@@ -117,4 +119,9 @@ footer{
 .social a{
   font-size: 3em;
   padding: 20px;
+  color: navy;
+}
+
+.social a:hover{
+  color: royalblue;
 }

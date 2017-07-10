@@ -2,13 +2,14 @@
 <html>
 <head>
   <title>Noah</title>
-  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:800" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= controller_name %> <%= action_name %>">
   <nav>
     <h1>Noah Ginex</h1>
     <ul>
@@ -53,7 +54,7 @@
     <div class="social col-sm-6">
       <p>Social</p>
       <a href="https://www.facebook.com/pages/The-Noah-Ginex-Puppet-Company/93832730848"><i class="ion-social-facebook"></i></a>
-      <a href="http://www.youtube.com/channel/UCQyOj7rLcAUyO4QieYMzpag"><i class="ion-social-youtube"></i></a>
+      <a href="https://www.youtube.com/channel/UCQyOj7rLcAUyO4QieYMzpag"><i class="ion-social-youtube"></i></a>
       <a href="https://twitter.com/JamesonJRalph"><i class="ion-social-twitter"></i></a>
     </div>
     <div class="contact col-sm-6">
