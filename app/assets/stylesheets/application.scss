@@ -27,11 +27,10 @@ body{
 nav{
   display:block;
   width: 100%;
-  height: 20vh;
+  height: 150px;
   padding: 10px;
-  border-bottom: 5px slategray solid;
+  border-bottom: 5px black solid;
   background-color: white;
-
 }
 
 h1{
@@ -51,7 +50,7 @@ nav ul{
   width: 100px;
   overflow: hidden;
   text-align: center;
-  margin-left: 60px;
+  margin-left: 40px;
 }
 
 .hid-box {
@@ -75,10 +74,9 @@ nav ul li{
   text-decoration: none;
   list-style: none;
   padding: 20px 5px;
-  margin: 0 2px;
-  background-color: slategray;
+  background-color: black;
   color: white;
-  width: 200px;
+  width: 175px;
   text-align: center;
   font-size: 1.25em;
   position: relative;
@@ -99,8 +97,7 @@ nav ul span{
 
 nav ul li:hover{
   cursor: pointer;
-  background-color: lightgrey;
-  color: slategray;
+  color: lightgrey;
 }
 
 nav ul li:hover span{
@@ -124,4 +121,9 @@ footer{
 
 .social a:hover{
   color: royalblue;
+}
+
+.banner{
+  text-align: center;
+
 }

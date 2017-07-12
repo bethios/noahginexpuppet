@@ -1,0 +1,25 @@
+table{
+  width: 90%;
+  margin: 15px;
+  background-color: white;
+}
+
+td, th{
+  text-align: left;
+  padding: 15px;
+  font-size: 1.25em;
+}
+
+th {
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: 2px slategray solid;
+}
+
+tr:nth-child(even){
+  background-color: whitesmoke;
+}
+
+tr:nth-child(odd){
+  background-color: white;
+}

@@ -19,7 +19,7 @@
             <%= image_tag src="jameson.png", class: 'nav-image'%>
           </div>
         </div>
-        <li>About</li>
+        <li><%= link_to "About", about_path %></li>
       </div>
       <div class="link">
         <div class="box">
@@ -27,7 +27,7 @@
             <%= image_tag src="edison.png", class: 'nav-image' %>
           </div>
         </div>
-        <li>Puppets</li>
+        <li><%= link_to "Puppets", puppets_path %></li>
       </div>
       <div class="link">
         <div class="box">
@@ -35,7 +35,7 @@
             <%= image_tag src="freddie.png", class: 'nav-image' %>
           </div>
         </div>
-        <li>Art</li>
+        <li><%= link_to "Art", art_path %></li>
       </div>
       <div class="link">
         <div class="box">
@@ -43,7 +43,7 @@
             <%= image_tag src="ron.png", class: 'nav-image' %>
           </div>
         </div>
-        <li>Face Painting</li>
+        <li><%= link_to "Face Painting", face_painting_path %></li>
       </div>
     </ul>
   </nav>
