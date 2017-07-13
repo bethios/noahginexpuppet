@@ -1,3 +1,9 @@
-<h2><%= @puppets.title %></h2>
-<%= link_to 'Edit Text', edit_post_path(@puppets.id), class: 'btn btn-success' %>
-<p><%= markdown(@puppets.body) %></p>
+<% if @puppets %>
+    <div class="content-container">
+      <h2><%= @puppets.title %></h2>
+      <%= link_to 'Edit Text', edit_post_path(@puppets.id), class: 'btn btn-success' %>
+      <p><%= markdown(@puppets.body) %></p>
+    </div>
+<% else %>
+    <p>Coming Soon!</p>
+<% end %>

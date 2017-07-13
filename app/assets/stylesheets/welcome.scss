@@ -1,9 +1,14 @@
-.monster-body{
-  background-image: image_url("puppetBits/body.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+.monster{
   height: 80vh;
+  overflow: scroll;
+}
+
+.monsterBody{
+  height: 80vh;
+}
+
+.break{
+  height: 50px;
 }
 
 .monster-making{
@@ -49,10 +54,6 @@
   z-index: 1;
 }
 
-.half{
+#drag-8{
   width: 50%;
-}
-
-.nose{
-  z-index: 25;
 }

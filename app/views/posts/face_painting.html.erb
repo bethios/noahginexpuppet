@@ -1,3 +1,9 @@
-<h2><%= @face_painting.title %></h2>
-<%= link_to 'Edit Text', edit_post_path(@face_painting.id), class: 'btn btn-success' %>
-<p><%= markdown(@face_painting.body) %></p>
+<% if @face_painting %>
+  <div class="content-container">
+    <h2><%= @face_painting.title %></h2>
+    <%= link_to 'Edit Text', edit_post_path(@face_painting.id), class: 'btn btn-success' %>
+    <p><%= markdown(@face_painting.body) %></p>
+  </div>
+<% else %>
+  <p>Coming Soon!</p>
+<% end %>

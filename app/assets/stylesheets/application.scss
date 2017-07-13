@@ -21,7 +21,10 @@ body{
   box-sizing: border-box;
   margin: 0;
   background-color: slategray;
+}
 
+h1 a:hover{
+  text-decoration: none;
 }
 
 nav{
@@ -71,15 +74,18 @@ nav ul{
 
 nav ul li{
   display: inline-block;
-  text-decoration: none;
   list-style: none;
   padding: 20px 5px;
   background-color: black;
-  color: white;
   width: 175px;
   text-align: center;
   font-size: 1.25em;
   position: relative;
+}
+
+nav ul li a{
+  color: white;
+  text-decoration: none;
 }
 
 nav ul span{
@@ -95,9 +101,10 @@ nav ul span{
   display: inline;
 }
 
-nav ul li:hover{
+nav ul li a:hover{
   cursor: pointer;
   color: lightgrey;
+  text-decoration: none;
 }
 
 nav ul li:hover span{
@@ -126,4 +133,9 @@ footer{
 .banner{
   text-align: center;
 
+}
+
+.content-container{
+  background: white;
+  padding: 15px;
 }
