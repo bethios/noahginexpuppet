@@ -26,6 +26,16 @@ class PostsController < ApplicationController
     @face_painting = Post.where("category = '4' ").last
   end
 
+  def send(email, name, body)
+    if InquiryMailer.new_inquiry(email, name, body).deliver_now
+      flash.now[:alert] = "Message sent!"
+      redirect_to :back
+    else
+      flash.now[:alert] = "Problem sending message"
+      redirect_to :back
+    end
+  end
+
   def new
     @post = Post.new
   end

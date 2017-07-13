@@ -4,7 +4,8 @@
 }
 
 .monsterBody{
-  height: 80vh;
+  max-height: 80vh;
+  max-width: 100%;
 }
 
 .break{
@@ -56,4 +57,12 @@
 
 #drag-8{
   width: 50%;
+}
+
+.modal{
+  background-color: rgba(255,255, 255, 0.70);
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  height: 220px;
 }

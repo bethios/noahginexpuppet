@@ -83,3 +83,8 @@ function dragMoveListener (event) {
 
 // this is used later in the resizing and gesture demos
 window.dragMoveListener = dragMoveListener;
+
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
+
