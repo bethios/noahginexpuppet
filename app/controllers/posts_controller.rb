@@ -26,7 +26,7 @@ class PostsController < ApplicationController
     @face_painting = Post.where("category = '4' ").last
   end
 
-  def send(email, name, body)
+  def send_inquiry(email, name, body)
     if InquiryMailer.new_inquiry(email, name, body).deliver_now
       flash.now[:alert] = "Message sent!"
       redirect_to :back
