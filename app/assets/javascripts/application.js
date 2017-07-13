@@ -85,6 +85,6 @@ function dragMoveListener (event) {
 window.dragMoveListener = dragMoveListener;
 
     $(window).on('load',function(){
-        $('#myModal').modal('show');
+        $('#monsterModal').modal('show');
     });
 
