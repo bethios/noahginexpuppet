@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get 'face_painting' => 'posts#face_painting'
 
+  match '/send_inquiry', to: 'posts#send_inquiry', via: 'post'
+
   root 'welcome#index'
 
 end
