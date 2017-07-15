@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :projects, only: [:new, :create, :destroy, :index]
+
   resources :posts
 
   resources :users, only: [:new, :create]
 
-  get 'admin' => 'posts#admin'
+  get 'admin' => 'welcome#admin'
 
   get 'about' => 'posts#about'
 
