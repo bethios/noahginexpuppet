@@ -88,3 +88,6 @@ window.dragMoveListener = dragMoveListener;
         $('#monsterModal').modal('show');
     });
 
+document.getElementById('video').playbackRate = 20;
+
+

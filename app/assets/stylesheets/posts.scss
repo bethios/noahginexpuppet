@@ -50,3 +50,20 @@ tr:nth-child(odd){
   @extend .parallax;
   background-image: image_url("customPuppet.jpg");
 }
+
+#video{
+  width: 300%;
+  vertical-align: bottom;
+}
+
+.art-video{
+  height: 400px;
+  overflow: hidden;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.post-div{
+  display: inline-block;
+}

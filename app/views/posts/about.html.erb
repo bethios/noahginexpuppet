@@ -2,7 +2,7 @@
 
 </div>
 
-<div class="content-container">
+<div class="content-container post-div">
   <% if @about_first %>
       <h2><%= @about_first.title %></h2>
       <%= link_to 'Edit Text', edit_post_path(@about_first.id), class: 'btn btn-success' %>
