@@ -36,17 +36,17 @@ tr:nth-child(odd){
 
 .parallax1 {
   @extend .parallax;
-  background-image: url("noah.jpg");
+  background-image: image_url("noah.jpg");
   background-position: top;
   height: 80vh;
 }
 
 .parallax2 {
   @extend .parallax;
-  background-image: url("snorf.jpg");
+  background-image: image_url("snorf.jpg");
 }
 
 .parallax3 {
   @extend .parallax;
-  background-image: url("customPuppet.jpg");
+  background-image: image_url("customPuppet.jpg");
 }
