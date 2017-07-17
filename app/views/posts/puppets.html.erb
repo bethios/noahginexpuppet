@@ -8,15 +8,22 @@
   <% end %>
 </div>
 
-<% if @puppets_projects %>
-    <% @puppets_projects.each do |project| %>
-        <div class="content-container">
-          <%= image_tag project.image.url(:standard) %>
-          <p><%= project.title %></p>
-          <%= link_to "Delete Project", project, method: :delete, class: 'btn btn-danger',
-                      data: { confirm: 'Are you sure you want to delete this project?' }  %>
-        </div>
-    <% end %>
-<% end %>
-
+<div class="projects-container">
+  <% if @puppets_projects %>
+      <% @puppets_projects.each do |project| %>
+          <div class="flip-container content-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+              <div class="front">
+                <%= image_tag project.image.url(:standard) %>
+              </div>
+              <div class="back">
+                <p><%= project.title %></p>
+                <%= link_to "Delete Project", project, method: :delete, class: 'btn btn-danger',
+                            data: { confirm: 'Are you sure you want to delete this project?' }  %>
+              </div>
+            </div>
+          </div>
+      <% end %>
+  <% end %>
+</div>
 

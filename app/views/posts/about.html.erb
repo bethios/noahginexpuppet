@@ -1,10 +1,31 @@
+<div class="parallax1">
+
+</div>
+
 <div class="content-container">
-  <% if @about %>
-      <h2><%= @about.title %></h2>
-      <%= link_to 'Edit Text', edit_post_path(@about.id), class: 'btn btn-success' %>
-      <p><%= markdown(@about.body) %></p>
+  <% if @about_first %>
+      <h2><%= @about_first.title %></h2>
+      <%= link_to 'Edit Text', edit_post_path(@about_first.id), class: 'btn btn-success' %>
+      <p><%= markdown(@about_first.body) %></p>
   <% else %>
       <p>Coming Soon!</p>
   <% end %>
 </div>
 
+<div class="parallax2">
+
+</div>
+
+<div class="content-container">
+  <% if @about_second %>
+      <h2><%= @about_second.title %></h2>
+      <%= link_to 'Edit Text', edit_post_path(@about_second.id), class: 'btn btn-success' %>
+      <p><%= markdown(@about_second.body) %></p>
+  <% else %>
+      <p>Coming Soon!</p>
+  <% end %>
+</div>
+
+<div class="parallax3">
+
+</div>
