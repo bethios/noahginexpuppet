@@ -30,6 +30,10 @@ class PostsController < ApplicationController
     @face_painting_projects = Project.where("category = '4' ")
   end
 
+  def hire
+    @hire = Post.where("category = '5' ").last
+  end
+
   def send_inquiry
     name = params[:name]
     email = params[:email]

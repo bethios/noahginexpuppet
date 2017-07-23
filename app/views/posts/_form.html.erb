@@ -6,7 +6,7 @@
       <%= form_for @post do |f| %>
           <div class="form-group">
             <%= f.label :category %>
-            <%= f.select :category,options_for_select([['About', 1],['Puppets', 2],['Art', 3],['Face Painting', 4] ],
+            <%= f.select :category,options_for_select([['About', 1],['Puppets', 2],['Art', 3],['Face Painting', 4],["Hire Me", 5] ],
                                                       :selected => params[:category]),
                          class: "form-control"  %>
           </div>
