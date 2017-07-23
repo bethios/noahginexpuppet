@@ -86,9 +86,9 @@ input{
 
 h2 {
   text-align: center;
-  font-size: 10rem;
+  font-size: 2rem;
   line-height:1;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .score {
@@ -163,28 +163,28 @@ h2 {
   background:image_url('puppets/Chamille1.png');
 }
 
-.mole1:hover{
+.mole1:active{
   background:image_url('puppets/Barkin2.png');
 }
 
-.mole2:hover{
+.mole2:active{
   background:image_url('puppets/Archie2.png');
 }
 
-.mole3:hover{
+.mole3:active{
   background:image_url('puppets/Earl2.png');
 }
 
-.mole4:hover{
+.mole4:active{
   background:image_url('puppets/Jameson2.png');
 }
 
-.mole5:hover{
+.mole5:active{
   background:image_url('puppets/Yeti2.png');
 }
 
-.mole6:hover{
-  background:image_path('puppets/Chamille2.png');
+.mole6:active{
+  background:image_url('puppets/Chamille2.png');
 }
 
 .hole.up .mole {

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-6">
-    <div class="art-video">
+    <div class="art-video content-container">
       <%= video_tag ("Jameson-drawing.mp4"), autoplay: true, loop: true, muted: true, id:
           'video' %>
     </div>
@@ -11,6 +11,7 @@
           <h2><%= @art.title %></h2>
           <%= link_to 'Edit Text', edit_post_path(@art.id), class: 'btn btn-success' %>
           <p><%= markdown(@art.body) %></p>
+          <%= link_to 'Hire Me', hire_path, class: 'btn btn-lg' %>
       <% else %>
           <p>Coming Soon!</p>
           <%= link_to 'Add Text', new_post_path, class: 'btn btn-success' %>
