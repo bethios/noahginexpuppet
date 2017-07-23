@@ -27,3 +27,4 @@ gem 'bootstrap-sass'
 gem 'bcrypt'
 gem 'figaro', '1.0'
 gem 'redcarpet', '~> 3.0.0'
+gem "paperclip", "~> 5.0.0"

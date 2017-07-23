@@ -1,0 +1,26 @@
+<div class="content-container">
+  <% if @face_painting %>
+      <h2><%= @face_painting.title %></h2>
+      <%= link_to 'Edit Text', edit_post_path(@face_painting.id), class: 'btn btn-success' %>
+      <p><%= markdown(@face_painting.body) %></p>
+  <% else %>
+      <p>Coming Soon!</p>
+  <% end %>
+</div>
+<div class="skew"></div>
+
+<% if @face_painting_projects %>
+    <% @face_painting_projects.each do |project| %>
+        <div class="content-container facepaintingExamples">
+          <div class="facepaintingImage">
+            <%= image_tag project.image.url(:standard) %>
+          </div>
+          <div class="content-container facepaintingText">
+            <p><%= project.title %></p>
+            <%= link_to "Delete Project", project, method: :delete, class: 'btn btn-danger',
+                        data: { confirm: 'Are you sure you want to delete this project?' }  %>
+          </div>
+        </div>
+
+    <% end %>
+<% end %>

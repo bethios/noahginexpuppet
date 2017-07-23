@@ -1,14 +1,24 @@
-.monster-body{
-  background-image: image_url("puppetBits/body.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+.monster{
   height: 80vh;
+  overflow: scroll;
+}
+
+.monsterBody{
+  max-height: 80vh;
+  max-width: 100%;
+}
+
+.break{
+  height: 50px;
 }
 
 .monster-making{
   background-color: white;
-  margin: 20px;
+  padding: 30px;
+  height: 80vh;
+  width: 100%;
+  overflow: scroll;
+  margin: 30px;
 }
 
 .draggable{
@@ -30,10 +40,12 @@
 
 .resize-container {
   width: 100%;
+  height: 60px;
 }
 
 .draggable img{
   width: 100%;
+  position: static;
 }
 
 .col-sm-8{
@@ -42,4 +54,16 @@
 
 .col-sm-2{
   z-index: 1;
+}
+
+#drag-8{
+  width: 50%;
+}
+
+.modal{
+  background-color: rgba(255,255, 255, 0.70);
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  height: 220px;
 }
