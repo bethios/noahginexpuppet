@@ -116,7 +116,7 @@ function startGame(){
     document.getElementsByClassName('score')[0].innerHTML = 0;
     timeUp = false;
     peep();
-    setTimeout(function(){timeUp = true}, 10000);
+    setTimeout(function(){timeUp = true}, 15000);
 }
 function bonk(e) {
     if(!e.isTrusted) return; //cheater!

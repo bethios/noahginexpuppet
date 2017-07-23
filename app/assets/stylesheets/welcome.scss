@@ -116,7 +116,9 @@ h2 {
 
 .hole:after {
   display: block;
-  background: url(puppets/dirt.svg) bottom center no-repeat;
+  background: image_url('puppets/dirt.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
   background-size:contain;
   content:'';
   width: 100%;
@@ -133,54 +135,56 @@ h2 {
   width: 100%;
   height: 100%;
   transition:all 0.4s, background 0s;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 .mole1{
-  background:url('puppets/Barkin1.png') bottom center no-repeat;
+  background:image_url('puppets/Barkin1.png');
 }
 
 .mole2{
-  background:url('puppets/Archie1.png') bottom center no-repeat;
+  background:image_url('puppets/Archie1.png');
 }
 
 .mole3{
-  background:url('puppets/Earl1.png') bottom center no-repeat;
+  background:image_url('puppets/Earl1.png');
 }
 
 .mole4{
-  background:url('puppets/Jameson1.png') bottom center no-repeat;
+  background:image_url('puppets/Jameson1.png');
 }
 
 .mole5{
-  background:url('puppets/Yeti1.png') bottom center no-repeat;
+  background:image_url('puppets/Yeti1.png');
 }
 
 .mole6{
-  background:url('puppets/Chamille1.png') bottom center no-repeat;
+  background:image_url('puppets/Chamille1.png');
 }
 
 .mole1:hover{
-  background:url('puppets/Barkin2.png') bottom center no-repeat;
+  background:image_url('puppets/Barkin2.png');
 }
 
 .mole2:hover{
-  background:url('puppets/Archie2.png') bottom center no-repeat;
+  background:image_url('puppets/Archie2.png');
 }
 
 .mole3:hover{
-  background:url('puppets/Earl2.png') bottom center no-repeat;
+  background:image_url('puppets/Earl2.png');
 }
 
 .mole4:hover{
-  background:url('puppets/Jameson2.png') bottom center no-repeat;
+  background:image_url('puppets/Jameson2.png');
 }
 
 .mole5:hover{
-  background:url('puppets/Yeti2.png') bottom center no-repeat;
+  background:image_url('puppets/Yeti2.png');
 }
 
 .mole6:hover{
-  background:url('puppets/Chamille2.png') bottom center no-repeat;
+  background:image_path('puppets/Chamille2.png');
 }
 
 .hole.up .mole {
@@ -200,15 +204,15 @@ h2 {
 .scoreBoard{
   @extend .skew-without-border;
   padding: 10px;
-  background-color: $color2;
-  color: $color4;
+  background-color: $color4;
+  color: $color1;
   font-size: 1.25em;
 }
 
 .whackapuppet{
   @extend .skew-without-border;
-  color: $color2;
-  background-color: $color4;
+  color: $color4;
+  background-color: $color1;
   margin: 0;
   padding: 10px;
   border: none;
