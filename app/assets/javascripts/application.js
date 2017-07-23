@@ -33,6 +33,7 @@ interact('.resize-drag')
         target.style.width  = event.rect.width + 'px';
         target.style.height = event.rect.height + 'px';
 
+        // translate when resizing from top or left edges
         x += event.deltaRect.left;
         y += event.deltaRect.top;
 
@@ -77,5 +78,49 @@ window.dragMoveListener = dragMoveListener;
         $('#monsterModal').modal('show');
     });
 
+var holes = document.getElementsByClassName('hole');
+var scoreBoard = document.getElementsByClassName('score')[0];
+var moles = document.getElementsByClassName('mole');
 
+var lastHole;
+var timeUp;
+var score = 0;
 
+function randomTime(min, max){
+    return Math.round(Math.random() * (max - min) + min);
+}
+function randomHole(holes){
+    var idx = Math.floor(Math.random() * holes.length );
+    var hole = holes[idx];
+    if(hole === lastHole){
+        return randomHole(holes)
+    }
+    lastHole = hole;
+    return hole;
+}
+
+function peep(){
+    var time = randomTime(300, 1000);
+    var hole = randomHole(holes);
+    hole.classList.add('up');
+    setTimeout(function(){
+        hole.classList.remove('up');
+    if(!timeUp) peep();
+    }, time)
+}
+function startGame(){
+    for(var i =0; i< moles.length; i++){
+        moles[i].addEventListener('click', bonk)
+    }
+    score = 0;
+    document.getElementsByClassName('score')[0].innerHTML = 0;
+    timeUp = false;
+    peep();
+    setTimeout(function(){timeUp = true}, 10000);
+}
+function bonk(e) {
+    if(!e.isTrusted) return; //cheater!
+    score ++;
+    this.classList.remove('up');
+    document.getElementsByClassName('score')[0].innerHTML = score
+}

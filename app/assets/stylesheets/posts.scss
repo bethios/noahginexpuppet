@@ -58,16 +58,12 @@ tr:nth-child(odd){
 }
 
 #video{
-  width: 300%;
-  vertical-align: bottom;
+  width: 100%;
 }
 
 .art-video{
-  height: 400px;
   overflow: hidden;
-  vertical-align: middle;
-  display: flex;
-  align-items: center;
+  text-align: center;
 }
 
 .post-div{

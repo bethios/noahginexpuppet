@@ -1,3 +1,5 @@
+@import "variables";
+
 .monster{
   height: 80vh;
   overflow: scroll;
@@ -66,4 +68,148 @@
   text-align: center;
   margin: auto;
   height: 220px;
+}
+
+.difficulty-label{
+  font-size: 2em;
+  padding: 15px;
+}
+
+input{
+  margin-bottom: 20px;
+}
+
+.controls{
+  text-align: center;
+  margin-top: 15px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 10rem;
+  line-height:1;
+  margin-bottom: 0;
+}
+
+.score {
+  background:rgba(255,255,255,0.2);
+  padding:0 3rem;
+  line-height:1;
+  border-radius:1rem;
+}
+
+.game {
+  box-sizing: border-box;
+  width:600px;
+  height:500px;
+  display:flex;
+  flex-wrap:wrap;
+  margin:0 auto;
+  padding-bottom: 50px;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url(puppets/dirt.svg) bottom center no-repeat;
+  background-size:contain;
+  content:'';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom:-30px;
+}
+
+.mole {
+  background-size:50%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s, background 0s;
+}
+
+.mole1{
+  background:url('puppets/Barkin1.png') bottom center no-repeat;
+}
+
+.mole2{
+  background:url('puppets/Archie1.png') bottom center no-repeat;
+}
+
+.mole3{
+  background:url('puppets/Earl1.png') bottom center no-repeat;
+}
+
+.mole4{
+  background:url('puppets/Jameson1.png') bottom center no-repeat;
+}
+
+.mole5{
+  background:url('puppets/Yeti1.png') bottom center no-repeat;
+}
+
+.mole6{
+  background:url('puppets/Chamille1.png') bottom center no-repeat;
+}
+
+.mole1:hover{
+  background:url('puppets/Barkin2.png') bottom center no-repeat;
+}
+
+.mole2:hover{
+  background:url('puppets/Archie2.png') bottom center no-repeat;
+}
+
+.mole3:hover{
+  background:url('puppets/Earl2.png') bottom center no-repeat;
+}
+
+.mole4:hover{
+  background:url('puppets/Jameson2.png') bottom center no-repeat;
+}
+
+.mole5:hover{
+  background:url('puppets/Yeti2.png') bottom center no-repeat;
+}
+
+.mole6:hover{
+  background:url('puppets/Chamille2.png') bottom center no-repeat;
+}
+
+.hole.up .mole {
+  top:0;
+}
+
+.skew-without-border{
+  -ms-transform: rotate(2deg); /* IE 9 */
+  -webkit-transform: rotate(2deg); /* Safari */
+  transform: rotate(2deg);
+}
+
+.gameBoard{
+  text-align: center;
+}
+
+.scoreBoard{
+  @extend .skew-without-border;
+  padding: 10px;
+  background-color: $color2;
+  color: $color4;
+  font-size: 1.25em;
+}
+
+.whackapuppet{
+  @extend .skew-without-border;
+  color: $color2;
+  background-color: $color4;
+  margin: 0;
+  padding: 10px;
+  border: none;
 }

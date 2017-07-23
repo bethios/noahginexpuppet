@@ -1,13 +1,14 @@
 @import "variables";
+@import 'application';
 
 .flip-container {
   perspective: 1000px;
-  background-color: $color1;
+  background-color: $color4;
   display: inline-block;
 }
 
 .flip-container:hover{
-  background-color: $color3
+  background-color: $color2
 }
 
 .flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -23,6 +24,7 @@
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
+  margin: 15px;
 }
 
 .front, .back {
@@ -50,10 +52,12 @@
 
 .projects-container{
   display: grid;
+  margin: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .facepaintingExamples{
+  @extend .content-container;
   width: 230px;
   height: 230px;
   background: $color3;
@@ -68,10 +72,10 @@
 }
 
 .facepaintingText{
+  text-align: center;
   display: inline-block;
   color:white;
-  text-align: center;
-  padding: 15px;
+  padding: 30px;
 }
 
 .facepaintingImage{
