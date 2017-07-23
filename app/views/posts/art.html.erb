@@ -3,9 +3,6 @@
     <div class="art-video">
       <%= video_tag ("JamesonCapture.mp4#t=31,442"), autoplay: true, loop: true, muted: true, id:
           'video' %>
-      <%= video_tag ("JamesonCapture.mp4#t=31,442")%>
-      <%= video_tag ("JamesonCapture.mp4")%>
-
     </div>
   </div>
   <div class="col-sm-6">
@@ -20,14 +17,16 @@
     </div>
   </div>
 </div>
-
-<% if @art_projects %>
-    <% @art_projects.each do |project| %>
-        <div class="content-container">
-          <%= image_tag project.image.url(:standard) %>
-          <p><%= project.title %></p>
-          <%= link_to "Delete Project", project, method: :delete, class: 'btn btn-danger',
-                      data: { confirm: 'Are you sure you want to delete this project?' }  %>
-        </div>
-    <% end %>
-<% end %>
+<div class="skew"></div>
+<div class="gallery">
+  <% if @art_projects %>
+      <% @art_projects.each do |project| %>
+          <div class="content-container">
+            <%= image_tag project.image.url(:standard) %>
+            <p><%= project.title %></p>
+            <%= link_to "Delete Project", project, method: :delete, class: 'btn btn-danger',
+                        data: { confirm: 'Are you sure you want to delete this project?' }  %>
+          </div>
+      <% end %>
+  <% end %>
+</div>

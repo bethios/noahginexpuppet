@@ -31,7 +31,10 @@ tr:nth-child(odd){
   background-attachment: fixed;
   background-position: center ;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 110%;
+  -ms-transform: rotate(-2deg); /* IE 9 */
+  -webkit-transform: rotate(-2deg); /* Safari */
+  transform: rotate(-2deg);
 }
 
 .parallax1 {
@@ -44,6 +47,9 @@ tr:nth-child(odd){
 .parallax2 {
   @extend .parallax;
   background-image: image_url("snorf.jpg");
+  -ms-transform: rotate(2deg); /* IE 9 */
+  -webkit-transform: rotate(2deg); /* Safari */
+  transform: rotate(2deg);
 }
 
 .parallax3 {
