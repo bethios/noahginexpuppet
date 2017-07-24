@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :require_sign_in, except: [:about, :art, :puppets, :face_painting, :hire, :send_inquiry]
+
   def index
     @posts = Post.all
   end

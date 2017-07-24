@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :find_project, except: [:new, :create, :index]
+  before_action :require_sign_in
 
   def new
     @project = Project.new

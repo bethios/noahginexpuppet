@@ -8,7 +8,9 @@
     <div class="content-container">
       <% if @art %>
           <h2><%= @art.title %></h2>
-          <%= link_to 'Edit Text', edit_post_path(@art.id), class: 'btn btn-success' %>
+          <% if current_user %>
+            <%= link_to 'Edit Text', edit_post_path(@art.id), class: 'btn btn-success' %>
+          <% end %>
           <p><%= markdown(@art.body) %></p>
           <%= link_to 'Hire Me', hire_path, class: 'btn btn-lg' %>
       <% else %>
@@ -27,8 +29,10 @@
             <div class="overlay">
               <div class="text">
               <p><%= project.title %></p>
-                <%= link_to "Delete Project", project, method: :delete, class: 'btn btn-danger',
+                <% if current_user %>
+                  <%= link_to "Delete Project", project, method: :delete, class: 'btn btn-danger',
                           data: { confirm: 'Are you sure you want to delete this project?' }  %>
+                <% end %>
               </div>
             </div>
           </div>

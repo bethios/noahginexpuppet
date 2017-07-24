@@ -5,8 +5,12 @@
 <div class="content-container post-div">
   <% if @about_first %>
       <h2><%= @about_first.title %></h2>
-      <%= link_to 'Edit Text', edit_post_path(@about_first.id), class: 'btn btn-success' %>
-      <p><%= markdown(@about_first.body) %></p>
+      <% if current_user %>
+        <%= link_to 'Edit Text', edit_post_path(@about_first.id), class: 'btn btn-success' %>
+      <% end %>
+      <div class="newspaper">
+        <p><%= markdown(@about_first.body) %></p>
+      </div>
   <% else %>
       <p>Coming Soon!</p>
   <% end %>
@@ -19,8 +23,12 @@
 <div class="content-container">
   <% if @about_second %>
       <h2><%= @about_second.title %></h2>
-      <%= link_to 'Edit Text', edit_post_path(@about_second.id), class: 'btn btn-success' %>
-      <p><%= markdown(@about_second.body) %></p>
+      <% if current_user %>
+        <%= link_to 'Edit Text', edit_post_path(@about_second.id), class: 'btn btn-success' %>
+      <% end %>
+      <div class="newspaper">
+        <p><%= markdown(@about_second.body) %></p>
+      </div>
   <% else %>
       <p>Coming Soon!</p>
   <% end %>

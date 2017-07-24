@@ -3,11 +3,15 @@
     <div class="content-container">
       <% if @hire %>
           <h2><%= @hire.title %></h2>
-          <%= link_to 'Edit Text', edit_post_path(@hire.id), class: 'btn btn-success' %>
+          <% if current_user %>
+            <%= link_to 'Edit Text', edit_post_path(@hire.id), class: 'btn btn-success' %>
+          <% end %>
           <p><%= markdown(@hire.body) %></p>
       <% else %>
           <p>Coming Soon!</p>
-          <%= link_to 'Add Text', new_post_path, class: 'btn btn-success' %>
+          <% if current_user %>
+            <%= link_to 'Add Text', new_post_path, class: 'btn btn-success' %>
+          <% end %>
     <% end %>
     </div>
   </div>

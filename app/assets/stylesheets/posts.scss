@@ -27,11 +27,12 @@ tr:nth-child(odd){
 }
 
 .parallax {
-  height: 500px;
+  height: 70vh;
+  max-height: 900px;
   background-attachment: fixed;
   background-position: center ;
   background-repeat: no-repeat;
-  background-size: 110%;
+  background-size: cover;
   -ms-transform: rotate(-2deg); /* IE 9 */
   -webkit-transform: rotate(-2deg); /* Safari */
   transform: rotate(-2deg);
@@ -54,7 +55,7 @@ tr:nth-child(odd){
 .parallax3 {
   @extend .parallax;
   background-image: image_url("customPuppet.jpg");
-  background-position: center top ;
+  background-position: center center ;
 }
 
 .video{
