@@ -10,7 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller_name %> <%= action_name %>">
-  <nav>
+  <nav class="desktop-nav">
     <h1 class="mainHeader grow"><%= link_to 'Noah Ginex', root_path %></h1>
     <ul>
       <div class="link">
@@ -55,6 +55,20 @@
       </div>
     </ul>
   </nav>
+
+  <div class="mobile-nav">
+    <h1 class="mainHeader grow"><%= link_to 'Noah Ginex', root_path %></h1>
+    <i class="ion-navicon-round" data-toggle="collapse" data-target="#mobile"></i>
+    <div id="mobile" class="collapse">
+      <ul class="mobile-menu">
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Puppets", puppets_path %></li>
+        <li><%= link_to "Art", art_path %></li>
+        <li><%= link_to "Face Painting", face_painting_path %></li>
+        <li><%= link_to "Hire Me", hire_path %></li>
+      </ul>
+    </div>
+  </div>
 
   <% if flash[:notice] %>
     <div class="alert alert-success">

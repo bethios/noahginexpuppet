@@ -41,7 +41,6 @@ tr:nth-child(odd){
   @extend .parallax;
   background-image: image_url("noah.jpg");
   background-position: top;
-  height: 80vh;
 }
 
 .parallax2 {
@@ -55,10 +54,13 @@ tr:nth-child(odd){
 .parallax3 {
   @extend .parallax;
   background-image: image_url("customPuppet.jpg");
+  background-position: center top ;
 }
 
-#video{
+.video{
+  text-align: center;
   width: 100%;
+  margin: auto;
 }
 
 .art-video{

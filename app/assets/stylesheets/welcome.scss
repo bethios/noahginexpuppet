@@ -1,13 +1,14 @@
 @import "variables";
 
 .monster{
-  height: 80vh;
+  height: 83vh;
   overflow: scroll;
 }
 
 .monsterBody{
-  max-height: 80vh;
+  height: 80vh;
   max-width: 100%;
+  max-height: 1000px;
 }
 
 .break{
