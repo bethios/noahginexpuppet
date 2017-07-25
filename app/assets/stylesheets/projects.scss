@@ -123,3 +123,20 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+.video{
+  width: 105%;
+  height: 105%;
+  top: -5px;
+  left: -5px;
+  margin: -10px;
+}
+
+.art-video{
+  overflow: hidden;
+}
+
+.puppet-video{
+  margin-top: 50px;
+  overflow: hidden;
+}
