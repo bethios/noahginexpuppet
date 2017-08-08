@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-sm-6">
+    <%= form_tag(charges_path) do %>
+      <div class="form-group">
+        <%= label_tag 'email', 'Email' %>
+        <%= email_field_tag 'email', nil, class: 'form-control', placeholder: 'Your Email Address' %>
+      </div>
+      <div class="form-group">
+        <%= label_tag 'size', 'Select Your Size' %>
+        <%= select_tag "credit_card", options_for_select([ "9x12", "12x15" ], "9x12")%>
+
+      </div>
+    <% end %>
+    <%= form_tag charges_path do %>
+        <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
+                data-key="<%= @stripe_btn_data[:key] %>"
+                data-amount="<%= @stripe_btn_data[:amount] %>"
+                data-description="<%= @stripe_btn_data[:description] %>" >
+        </script>
+    <% end %>
+  </div>
+</div>

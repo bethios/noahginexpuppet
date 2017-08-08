@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
+  resources :charges, only: [:new, :create]
+
   get 'admin' => 'welcome#admin'
 
   get 'about' => 'posts#about'

@@ -45,7 +45,7 @@ class PostsController < ApplicationController
     body = params[:body]
 
     from = Email.new(email: email)
-    to = Email.new(email: 'bethios@gmail.com')
+    to = Email.new(email: 'colonelernie@gmail.com')
     subject = email
     content = Content.new(type: 'text/plain', value: body)
     mail = Mail.new(from, subject, to, content)
