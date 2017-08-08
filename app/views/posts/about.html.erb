@@ -8,7 +8,7 @@
       <% if current_user %>
         <%= link_to 'Edit Text', edit_post_path(@about_first.id), class: 'btn btn-success' %>
       <% end %>
-      <div class="newspaper">
+      <div class="content-container">
         <p><%= markdown(@about_first.body) %></p>
       </div>
   <% else %>
@@ -26,7 +26,7 @@
       <% if current_user %>
         <%= link_to 'Edit Text', edit_post_path(@about_second.id), class: 'btn btn-success' %>
       <% end %>
-      <div class="newspaper">
+      <div class="content-container">
         <p><%= markdown(@about_second.body) %></p>
       </div>
   <% else %>

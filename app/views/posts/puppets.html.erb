@@ -1,6 +1,11 @@
 <div class="row">
   <div class="col-sm-6">
-    <div class="content-container">
+    <div class="puppet-video">
+      <%= video_tag ("Freddy3.mp4"), autoplay: true, loop: true, muted: true, class: 'video' %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div>
       <% if @puppets %>
           <h2><%= @puppets.title %></h2>
           <% if current_user %>
@@ -12,12 +17,6 @@
           <p>Coming Soon!</p>
           <%= link_to 'Add Text', new_post_path, class: 'btn btn-success' %>
     <% end %>
-    </div>
-
-  </div>
-  <div class="col-sm-6">
-    <div class="puppet-video">
-      <%= video_tag ("Freddy3.mp4"), autoplay: true, loop: true, muted: true, class: 'video' %>
     </div>
   </div>
 </div>
