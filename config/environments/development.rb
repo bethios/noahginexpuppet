@@ -41,16 +41,6 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost' }
   config.action_mailer.delivery_method = :smtp
 
-  config.action_mailer.smtp_settings = {
-      address:        'smtp.sendgrid.net',
-      port:           '2525',
-      authentication: :plain,
-      user_name:      ENV['SENDGRID_USERNAME'],
-      password:       ENV['SENDGRID_PASSWORD'],
-      domain:         'heroku.com',
-      enable_starttls_auto: true,
-  }
-
   config.paperclip_defaults = {
       s3_host_name: "s3-#{ENV['AWS_REGION']}.amazonaws.com",
       storage: :s3,

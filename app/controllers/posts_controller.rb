@@ -45,7 +45,7 @@ class PostsController < ApplicationController
     body = params[:body]
 
     from = Email.new(email: email)
-    to = Email.new(email: 'colonelernie@gmail.com')
+    to = Email.new(email: 'bethios@gmail.com')
     subject = email
     content = Content.new(type: 'text/plain', value: body)
     mail = Mail.new(from, subject, to, content)
@@ -57,7 +57,6 @@ class PostsController < ApplicationController
     puts response.headers
 
     flash[:notice] = "Thanks for your message! We will be in touch as soon as possible! Scroll down to play a game of Puppet Whack-a-mole"
-    redirect_to hire_path
   end
 
   def new
