@@ -1,21 +1,19 @@
 class ChargesController < ApplicationController
   def create
-    size = params[:size]
-    puts size
     customer = Stripe::Customer.create(
-        email: 'bethios@gmail.com',
+        email: params[:stripeEmail],
         card: params[:stripeToken]
     )
 
     charge = Stripe::Charge.create(
         customer: customer.id,
         amount: 75_00,
-        description: "BigMoney",
+        description: "Watercolor painting",
         currency: 'usd'
     )
 
-    flash[:notice] = "Your payment has been received! "
-    redirect_to art_path
+    flash[:notice] = "Your payment has been received for a watercolor painting."
+    redirect_to complete_path
 
   rescue Stripe::CardError => e
     flash[:alert] = e.message
@@ -25,8 +23,12 @@ class ChargesController < ApplicationController
   def new
     @stripe_btn_data = {
         key: "#{ Rails.configuration.stripe[:publishable_key]}",
-        description: "Original 9x6 watercolor painting",
+        description: "Original watercolor painting",
         amount: 75_00
     }
+  end
+
+  def complete
+
   end
 end

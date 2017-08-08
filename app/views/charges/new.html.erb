@@ -1,22 +1,41 @@
 <div class="row">
-  <div class="col-sm-6">
-    <%= form_tag(charges_path) do %>
-      <div class="form-group">
-        <%= label_tag 'email', 'Email' %>
-        <%= email_field_tag 'email', nil, class: 'form-control', placeholder: 'Your Email Address' %>
-      </div>
-      <div class="form-group">
-        <%= label_tag 'size', 'Select Your Size' %>
-        <%= select_tag "credit_card", options_for_select([ "9x12", "12x15" ], "9x12")%>
-
-      </div>
+  <div class="col-sm-4 art-types-sale">
+    <%= image_tag src='watercolor.jpg', :class =>'art-sale' %>
+    <p class="art-sale-text">Send me your inspiration image and I'll create an original watercolor, 9"x12"(or smaller upon request).</p>
+    <p><em>$150.00</em></p>
+    <%= form_tag charges_path do %>
+      <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
+              data-key="<%= @stripe_btn_data[:key] %>"
+              data-amount="15000"
+              data-name="Noah Ginex watercolor"
+              data-description="Original 9x12 Watercolor" >
+      </script>
     <% end %>
+  </div>
+  <div class="col-sm-4 art-types-sale">
+    <%= image_tag src='sketch.jpg', :class =>'art-sale' %>
+    <p class="art-sale-text">Based on your inspiration image I'll create a one of a kind digital sketch for you.</p>
+    <p><em>$20.00</em></p>
     <%= form_tag charges_path do %>
         <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
                 data-key="<%= @stripe_btn_data[:key] %>"
-                data-amount="<%= @stripe_btn_data[:amount] %>"
-                data-description="<%= @stripe_btn_data[:description] %>" >
+                data-amount="2000"
+                data-name="Digital Sketch"
+                data-description="Original digital sketch" >
         </script>
     <% end %>
   </div>
-</div>
+  <div class="col-sm-4 art-types-sale">
+    <%= image_tag src='sketch.jpg', :class =>'art-sale' %>
+    <p class="art-sale-text">Based on your inspiration image I'll create a one of a kind digital sketch for you.</p>
+    <p><em>$20.00</em></p>
+    <%= form_tag charges_path do %>
+        <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
+                data-key="<%= @stripe_btn_data[:key] %>"
+                data-amount="2000"
+                data-name="Digital Sketch"
+                data-description="Original digital sketch" >
+        </script>
+    <% end %>
+  </div>
+  </div>

@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :charges, only: [:new, :create]
 
+  get 'complete' => 'charges#complete'
+
   get 'admin' => 'welcome#admin'
 
   get 'about' => 'posts#about'
