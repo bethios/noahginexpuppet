@@ -1,7 +1,9 @@
 <div class="row">
   <div class="col-sm-6">
     <div class="art-video">
-      <%= video_tag ("Jameson3.mp4"), size: "400x400", autoplay: true, loop: true, muted: true, class: 'video' %>
+      <%= video_tag ("Jameson3.mp4"), size: "400x400",
+                    autoplay: true, loop: true, muted: true,
+                    class: 'video', alt: 'video of drawing Jameson, a furry orange monster' %>
     </div>
   </div>
   <div class="col-sm-6">
@@ -26,7 +28,7 @@
   <% if @art_projects %>
       <% @art_projects.each do |project| %>
           <div class="art-sample">
-            <%= image_tag project.image.url(:standard), class: 'square-preview' %>
+            <%= image_tag project.image.url(:standard), class: 'square-preview', alt: project.title %>
             <div class="overlay">
               <div class="text">
               <p><%= project.title %></p>

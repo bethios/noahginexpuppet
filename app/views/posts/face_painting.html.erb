@@ -23,7 +23,7 @@
       <% @face_painting_projects.each do |project| %>
           <div class="facepaintingExamples">
             <div class="facepaintingImage">
-              <%= image_tag project.image.url(:standard) %>
+              <%= image_tag project.image.url(:standard), alt: project.title  %>
             </div>
             <div class="facepaintingText">
               <p><%= project.title %></p>

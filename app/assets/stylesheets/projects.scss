@@ -51,12 +51,6 @@
   overflow: scroll;
 }
 
-.projects-container{
-  display: grid;
-  margin: 30px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
 .facepaintingExamples{
   @extend .content-container;
   width: 230px;
@@ -139,4 +133,12 @@
 .puppet-video{
   margin-top: 60px;
   overflow: hidden;
+}
+
+@media (min-width: 1000px){
+  .projects-container{
+    display: grid;
+    margin: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

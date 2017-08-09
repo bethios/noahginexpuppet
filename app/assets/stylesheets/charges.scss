@@ -1,12 +1,22 @@
+@import "variables";
+
 .art-sale{
   width: 100%;
 }
 
 .art-types-sale{
   text-align: center;
+  padding-bottom: 25px;
 }
 
 .art-sale-text{
-  height: 75px;
+  min-height: 75px;
   padding-top: 15px;
+}
+
+@media(max-width: 1000px ){
+  .art-types-sale{
+    border-bottom: 2px dashed $color4;
+    margin-bottom: 15px;
+  }
 }
