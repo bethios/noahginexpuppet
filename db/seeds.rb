@@ -9,6 +9,7 @@
 
 User.create!(
        name:     'Noah Ginex',
-       email:    'colonelernie@gmail.com ',
+       email:    'colonelernie@gmail.com',
        password: 'barkin',
          )
+puts "#{User.count} users created"

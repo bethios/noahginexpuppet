@@ -5,6 +5,7 @@
   perspective: 1000px;
   background-color: $color4;
   display: inline-block;
+  margin: 10px;
 }
 
 .flip-container:hover{
@@ -80,4 +81,62 @@
 
 .facepaintingImage{
   display:inline-block;
+}
+
+.art-sample{
+  cursor: pointer;
+  margin: 15px;
+  padding: 0;
+  position: relative;
+  border: $color1 5px solid
+}
+
+.square-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $color1;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.art-sample:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: scroll;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.video{
+  width: 105%;
+  height: 105%;
+  top: -5px;
+  left: -5px;
+  margin: -10px;
+}
+
+.art-video{
+  overflow: hidden;
+}
+
+.puppet-video{
+  margin-top: 60px;
+  overflow: hidden;
 }

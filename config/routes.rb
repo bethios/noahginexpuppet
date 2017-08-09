@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
 
+  resources :sessions, only: [:new, :create, :destroy]
+
   get 'admin' => 'welcome#admin'
 
   get 'about' => 'posts#about'

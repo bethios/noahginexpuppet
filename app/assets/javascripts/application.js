@@ -100,7 +100,7 @@ function randomHole(holes){
 }
 
 function peep(){
-    var time = randomTime(300, 1000);
+    var time = randomTime(400, 1100);
     var hole = randomHole(holes);
     hole.classList.add('up');
     setTimeout(function(){
@@ -119,8 +119,13 @@ function startGame(){
     setTimeout(function(){timeUp = true}, 15000);
 }
 function bonk(e) {
+    var mole = this;
+    this.classList.add('bonked');
     if(!e.isTrusted) return; //cheater!
     score ++;
-    this.classList.remove('up');
+    setTimeout(function(){
+        mole.classList.remove('up');
+        mole.classList.remove('bonked');
+    }, 300);
     document.getElementsByClassName('score')[0].innerHTML = score
 }
