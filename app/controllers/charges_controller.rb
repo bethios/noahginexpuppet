@@ -1,5 +1,7 @@
 class ChargesController < ApplicationController
   def create
+    @price = params[:price]
+
     customer = Stripe::Customer.create(
         email: params[:stripeEmail],
         card: params[:stripeToken]
@@ -7,24 +9,24 @@ class ChargesController < ApplicationController
 
     charge = Stripe::Charge.create(
         customer: customer.id,
-        amount: 75_00,
-        description: "Watercolor painting",
+        amount: @price,
+        description: "Noah Ginex Art Work",
         currency: 'usd'
     )
 
     flash[:notice] = "Your payment has been received for a watercolor painting."
     redirect_to complete_path
 
-  rescue Stripe::CardError => e
-    flash[:alert] = e.message
-    redirect_to new_charge_path
+    rescue Stripe::CardError => e
+      flash[:alert] = e.message
+      redirect_to new_charge_path
   end
 
   def new
     @stripe_btn_data = {
         key: "#{ Rails.configuration.stripe[:publishable_key]}",
-        description: "Original watercolor painting",
-        amount: 75_00
+        description: "Noah Ginex Art Work",
+        amount: @price
     }
   end
 
