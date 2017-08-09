@@ -94,6 +94,7 @@ class PostsController < ApplicationController
 
     if @post.destroy
       flash[:notice] = "Deleted!"
+      redirect_to admin_path
     else
       flash.now[:alert] = @post.errors.full_messages.to_sentence
       redirect_to admin_path
