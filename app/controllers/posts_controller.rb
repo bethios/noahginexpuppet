@@ -1,5 +1,8 @@
+require 'sendgrid-ruby'
+
 class PostsController < ApplicationController
   before_action :require_sign_in, except: [:about, :art, :puppets, :face_painting, :hire, :send_inquiry]
+  include SendGrid
 
   def index
     @posts = Post.all
@@ -41,13 +44,19 @@ class PostsController < ApplicationController
     email = params[:email]
     body = params[:body]
 
-    if InquiryMailer.new_inquiry(email, name, body).deliver_now
-      flash[:notice] = "Message sent!"
-      redirect_to :back
-    else
-      flash.now[:alert] = "Problem sending message"
-      redirect_to :back
-    end
+    from = Email.new(email: email)
+    to = Email.new(email: 'colonelernie@gmail.com')
+    subject = email
+    content = Content.new(type: 'text/plain', value: body)
+    mail = Mail.new(from, subject, to, content)
+
+    sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+    response = sg.client.mail._('send').post(request_body: mail.to_json)
+    puts response.status_code
+    puts response.body
+    puts response.headers
+
+    flash[:notice] = "Thanks for your message! We will be in touch as soon as possible! Scroll down to play a game of Puppet Whack-a-mole"
   end
 
   def new
@@ -85,6 +94,7 @@ class PostsController < ApplicationController
 
     if @post.destroy
       flash[:notice] = "Deleted!"
+      redirect_to admin_path
     else
       flash.now[:alert] = @post.errors.full_messages.to_sentence
       redirect_to admin_path

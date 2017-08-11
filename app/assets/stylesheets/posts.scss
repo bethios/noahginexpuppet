@@ -27,12 +27,12 @@ tr:nth-child(odd){
 }
 
 .parallax {
-  height: 70vh;
-  max-height: 900px;
+  height: 50vh;
+  max-height: 400px;
   background-attachment: fixed;
-  background-position: center ;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center center;
+  background-size: auto;
   -ms-transform: rotate(-2deg); /* IE 9 */
   -webkit-transform: rotate(-2deg); /* Safari */
   transform: rotate(-2deg);
@@ -55,10 +55,21 @@ tr:nth-child(odd){
 .parallax3 {
   @extend .parallax;
   background-image: image_url("customPuppet.jpg");
-  background-position: center center ;
 }
-
 
 .post-div{
   display: inline-block;
+}
+
+@media (min-width: 600px){
+  .parallax{
+    background-position: center ;
+    background-size: cover;
+    height: 70vh;
+    max-height: 900px;
+  }
+
+  .parallax3{
+    background-position: center center ;
+  }
 }

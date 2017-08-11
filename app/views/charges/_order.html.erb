@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-sm-4 art-types-sale">
+    <%= image_tag src='sketch.jpg', :class =>'art-sale',
+                  alt: 'Sketched image, man with holographic glasses and unkempt hair looking in a mirror' %>
+    <p class="art-sale-text">Based on your inspiration image I'll create a one of a kind digital sketch for you.</p>
+    <p><em>$20.00</em></p>
+    <%= form_tag charges_path do %>
+        <%= hidden_field_tag :price, 2000 %>
+        <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-amount="2000"
+              data-name="Digital Sketch"
+              data-description="Original digital sketch" >
+      </script>
+    <% end %>
+  </div>
+  <div class="col-sm-4 art-types-sale">
+    <%= image_tag src='robot.png', :class =>'art-sale',
+                  alt: 'digital image of a sleepy looking robot standing up with a smile on its face.' %>
+    <p class="art-sale-text">With your inspiration image I will create an inked drawing just for you.</p>
+    <p><em>$50.00</em></p>
+    <%= form_tag charges_path do%>
+        <%= hidden_field_tag :price, 5000 %>
+        <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-amount="5000"
+              data-name="Inked Drawing"
+              data-description="Original inked drawing" >
+      </script>
+    <% end %>
+  </div>
+  <div class="col-sm-4 art-types-sale">
+    <%= image_tag src='watercolor.jpg', :class =>'art-sale', alt: 'watercolor painting of two dogs sitting on a couch.' %>
+    <p class="art-sale-text">Send me your inspiration image and I'll create an original watercolor, 9"x12"(or smaller upon request).</p>
+    <p><em>$150.00</em></p>
+    <%= form_tag charges_path do %>
+        <%= hidden_field_tag :price, 15000 %>
+        <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-amount="15000"
+              data-name="Watercolor"
+              data-description="Original 9x12 Watercolor" >
+      </script>
+    <% end %>
+  </div>
+</div>

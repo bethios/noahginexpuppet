@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-sm-4 art-types-sale">
+    <%= image_tag src='sketch.jpg', :class =>'art-sale' %>
+    <p class="art-sale-text">Based on your inspiration image I'll create a one of a kind digital sketch for you.</p>
+    <p><em>$20.00</em></p>
+    <%= form_tag charges_path do %>
+        <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
+                data-key="<%= @stripe_btn_data_sketch[:key] %>"
+                data-amount="<%= @stripe_btn_data_sketch[:amount] %>"
+                data-name="Noah Ginex Original"
+                data-description="<%= @stripe_btn_data_sketch[:description] %>" >
+        </script>
+    <% end %>
+  </div>
+  <div class="col-sm-4 art-types-sale">
+    <%= image_tag src='robot.png', :class =>'art-sale' %>
+    <p class="art-sale-text">With your inspiration image I will create an inked drawing just for you.</p>
+    <p><em>$50.00</em></p>
+    <%= form_tag charges_path do %>
+        <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
+                data-key="<%= @stripe_btn_data_digital[:key] %>"
+                data-amount="<%= @stripe_btn_data_digital[:amount] %>"
+                data-name="Noah Ginex Original"
+                data-description="<%= @stripe_btn_data_digital[:description] %>" >
+        </script>
+    <% end %>
+  </div>
+  <div class="col-sm-4 art-types-sale">
+    <%= image_tag src='watercolor.jpg', :class =>'art-sale' %>
+    <p class="art-sale-text">Send me your inspiration image and I'll create an original watercolor, 9"x12"(or smaller upon request).</p>
+    <p><em>$150.00</em></p>
+    <%= form_tag charges_path do %>
+        <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
+                data-key="<%= @stripe_btn_data_watercolor[:key] %>"
+                data-amount="<%= @stripe_btn_data_watercolor[:amount] %>>"
+                data-name="Noah Ginex Original"
+                data-description="<%= @stripe_btn_data_watercolor[:description] %>" >
+        </script>
+    <% end %>
+  </div>
+  </div>

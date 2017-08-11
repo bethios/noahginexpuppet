@@ -1,33 +1,44 @@
 require 'rails_helper'
+include SessionsHelper
 
 RSpec.describe WelcomeController, type: :controller do
+  let(:admin) { User.create!(name: 'admin user', email: 'admin@admin.com', password: "helloworld")}
 
-  describe "GET #index" do
-    it "returns http success" do
-      get :index
-      expect(response).to have_http_status(:success)
+  context "guest" do
+    describe "GET index" do
+      it "renders the index template" do
+        get :index
+        expect(response).to render_template("index")
+      end
+    end
+
+    describe "GET admin" do
+      it "redirects to new session" do
+        get :admin
+        expect(response).to redirect_to(new_session_path)
+      end
     end
   end
 
-  describe "GET #show" do
-    it "returns http success" do
-      get :show
-      expect(response).to have_http_status(:success)
+  context "admin" do
+    before do
+      create_session(admin)
+    end
+
+    describe "GET index" do
+      it "renders the index template" do
+        get :index
+        expect(response).to render_template("index")
+      end
+    end
+
+    describe "GET admin" do
+      it "renders the admin template" do
+        get :admin
+        expect(response).to render_template("admin")
+      end
     end
   end
 
-  describe "GET #new" do
-    it "returns http success" do
-      get :new
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET #edit" do
-    it "returns http success" do
-      get :edit
-      expect(response).to have_http_status(:success)
-    end
-  end
 
 end

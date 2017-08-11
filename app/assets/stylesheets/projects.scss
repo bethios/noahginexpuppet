@@ -51,12 +51,6 @@
   overflow: scroll;
 }
 
-.projects-container{
-  display: grid;
-  margin: 30px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
 .facepaintingExamples{
   @extend .content-container;
   width: 230px;
@@ -139,4 +133,24 @@
 .puppet-video{
   margin-top: 60px;
   overflow: hidden;
+}
+@media (min-width: 415px) {
+  .projects-container {
+    display: grid;
+    margin: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 700px) {
+  .projects-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px){
+  .projects-container{
+    margin: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

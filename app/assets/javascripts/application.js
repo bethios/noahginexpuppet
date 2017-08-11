@@ -86,29 +86,29 @@ var lastHole;
 var timeUp;
 var score = 0;
 
-function randomTime(min, max){
+function generateRandomTime(min, max){
     return Math.round(Math.random() * (max - min) + min);
 }
-function randomHole(holes){
-    var idx = Math.floor(Math.random() * holes.length );
-    var hole = holes[idx];
+function getRandomHole(holes){
+    var index = Math.floor(Math.random() * holes.length );
+    var hole = holes[index];
     if(hole === lastHole){
-        return randomHole(holes)
+        return getRandomHole(holes)
     }
     lastHole = hole;
     return hole;
 }
 
 function peep(){
-    var time = randomTime(400, 1100);
-    var hole = randomHole(holes);
+    var time = generateRandomTime(400, 1100);
+    var hole = getRandomHole(holes);
     hole.classList.add('up');
     setTimeout(function(){
         hole.classList.remove('up');
     if(!timeUp) peep();
     }, time)
 }
-function startGame(){
+function runGame(){
     for(var i =0; i< moles.length; i++){
         moles[i].addEventListener('click', bonk)
     }

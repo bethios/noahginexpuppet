@@ -2,12 +2,12 @@
 
 .monster{
   height: 83vh;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .monsterBody{
   height: 80vh;
-  max-width: 100%;
+  width: 100%;
   max-height: 1000px;
 }
 
@@ -68,7 +68,7 @@
   width: 50%;
   text-align: center;
   margin: auto;
-  height: 220px;
+  height: 33%;
 }
 
 .difficulty-label{
@@ -101,8 +101,8 @@ h2 {
 
 .game {
   box-sizing: border-box;
-  width:600px;
-  height:500px;
+  width:300px;
+  height:600px;
   display:flex;
   flex-wrap:wrap;
   margin:0 auto;
@@ -110,7 +110,7 @@ h2 {
 }
 
 .hole {
-  flex: 1 0 33.33%;
+  flex: 1 0 50%;
   overflow: hidden;
   position: relative;
 }
@@ -123,14 +123,14 @@ h2 {
   background-size:contain;
   content:'';
   width: 100%;
-  height:70px;
+  height: 70px;
   position: absolute;
   z-index: 2;
-  bottom:-30px;
+  bottom: -30px;
 }
 
 .mole {
-  background-size:50%;
+  background-size:contain;
   position: absolute;
   top: 100%;
   width: 100%;
@@ -140,51 +140,51 @@ h2 {
   background-repeat: no-repeat;
 }
 
-.mole1{
+#mole1{
   background:image_url('puppets/Barkin1.png');
 }
 
-.mole2{
+#mole2{
   background:image_url('puppets/Archie1.png');
 }
 
-.mole3{
+#mole3{
   background:image_url('puppets/Earl1.png');
 }
 
-.mole4{
+#mole4{
   background:image_url('puppets/Jameson1.png');
 }
 
-.mole5{
+#mole5{
   background:image_url('puppets/Yeti1.png');
 }
 
-.mole6{
+#mole6{
   background:image_url('puppets/Chamille1.png');
 }
 
-.mole1.bonked {
+#mole1.bonked {
   background:image_url('puppets/Barkin2.png');
 }
 
-.mole2.bonked{
+#mole2.bonked{
   background:image_url('puppets/Archie2.png');
 }
 
-.mole3.bonked{
+#mole3.bonked{
   background:image_url('puppets/Earl2.png');
 }
 
-.mole4.bonked{
+#mole4.bonked{
   background:image_url('puppets/Jameson2.png');
 }
 
-.mole5.bonked{
+#mole5.bonked{
   background:image_url('puppets/Yeti2.png');
 }
 
-.mole6.bonked{
+#mole6.bonked{
   background:image_url('puppets/Chamille2.png');
 }
 
@@ -210,7 +210,7 @@ h2 {
   font-size: 1.25em;
 }
 
-.whackapuppet{
+.whack-a-puppet{
   @extend .skew-without-border;
   color: $color4;
   background-color: $color1;
@@ -218,3 +218,50 @@ h2 {
   padding: 10px;
   border: none;
 }
+
+@media (max-width: 767px){
+  .newspaper{
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    -webkit-column-rule: 1px solid $color2; /* Chrome, Safari, Opera */
+    -moz-column-rule: 1px solid $color2; /* Firefox */
+    column-rule: 1px solid $color2;
+  }
+}
+
+@media (min-width: 767px){
+  .monster{
+    height: 83vh;
+    overflow: scroll;
+  }
+
+  .monsterBody{
+    width: 100%;
+    height: auto;
+  }
+
+  .game{
+    width:600px;
+    height:500px;
+  }
+
+  .hole{
+    flex: 1 0 33.33%;
+  }
+
+  .mole {
+    background-size:50%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition:all 0.6s, background 0s;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+}
+

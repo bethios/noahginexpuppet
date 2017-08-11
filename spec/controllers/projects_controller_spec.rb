@@ -1,47 +1,45 @@
 require 'rails_helper'
+include SessionsHelper
 
 RSpec.describe ProjectsController, type: :controller do
+  let(:test_project) { Post.create!(title: 'test puppet post', category: 2)}
+  let(:admin) { User.create!(name: 'admin user', email: 'admin@admin.com', password: "helloworld")}
 
-  describe "GET #new" do
-    it "returns http success" do
-      get :new
-      expect(response).to have_http_status(:success)
+  context "guest" do
+    describe "GET index" do
+      it "returns http redirect" do
+        get :index
+        expect(response).to redirect_to(new_session_path)
+      end
+    end
+
+    describe "GET new" do
+      it "returns http redirect" do
+        get :new
+        expect(response).to redirect_to(new_session_path)
+      end
+    end
+
+    describe "GET create" do
+      it "returns http redirect" do
+        post :create, project: {title: 'test puppet post', category: 2}
+        expect(response).to redirect_to(new_session_path)
+      end
+    end
+
+    describe "DELETE destroy" do
+      it "returns http redirect" do
+        delete :destroy, id: test_project.id
+        expect(response).to redirect_to(new_session_path)
+      end
     end
   end
 
-  describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
+  context "admin" do
+    before do
+      create_session(admin)
     end
-  end
 
-  describe "GET #edit" do
-    it "returns http success" do
-      get :edit
-      expect(response).to have_http_status(:success)
-    end
-  end
 
-  describe "GET #update" do
-    it "returns http success" do
-      get :update
-      expect(response).to have_http_status(:success)
-    end
   end
-
-  describe "GET #destroy" do
-    it "returns http success" do
-      get :destroy
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET #index" do
-    it "returns http success" do
-      get :index
-      expect(response).to have_http_status(:success)
-    end
-  end
-
 end
