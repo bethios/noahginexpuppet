@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   get 'art' => 'posts#art'
 
-  get 'face_painting' => 'posts#face_painting'
+  get 'events' => 'posts#events'
 
   get 'hire' => 'posts#hire'
 

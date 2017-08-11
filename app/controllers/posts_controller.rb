@@ -1,7 +1,7 @@
 require 'sendgrid-ruby'
 
 class PostsController < ApplicationController
-  before_action :require_sign_in, except: [:about, :art, :puppets, :face_painting, :hire, :send_inquiry]
+  before_action :require_sign_in, except: [:about, :art, :puppets, :events, :hire, :send_inquiry]
   include SendGrid
 
   def index
@@ -30,9 +30,9 @@ class PostsController < ApplicationController
     @puppets_projects = Project.where("category = '2' ")
   end
 
-  def face_painting
-    @face_painting = Post.where("category = '4' ").last
-    @face_painting_projects = Project.where("category = '4' ")
+  def events
+    @event = Post.where("category = '4' ").last
+    @event_projects = Project.where("category = '4' ")
   end
 
   def hire
@@ -52,9 +52,6 @@ class PostsController < ApplicationController
 
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
     response = sg.client.mail._('send').post(request_body: mail.to_json)
-    puts response.status_code
-    puts response.body
-    puts response.headers
 
     flash[:notice] = "Thanks for your message! We will be in touch as soon as possible! Scroll down to play a game of Puppet Whack-a-mole"
   end

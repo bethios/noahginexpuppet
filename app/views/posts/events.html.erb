@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-sm-6">
     <div>
-      <% if @face_painting %>
-          <h2><%= @face_painting.title %></h2>
-          <%= link_to 'Edit Text', edit_post_path(@face_painting.id), class: 'btn btn-success' %>
-          <p><%= markdown(@face_painting.body) %></p>
+      <% if @event %>
+          <h2><%= @event.title %></h2>
+          <%= link_to 'Edit Text', edit_post_path(@event.id), class: 'btn btn-success' %>
+          <p><%= markdown(@event.body) %></p>
           <%= link_to 'Hire Me', hire_path, class: 'btn btn-lg' %>
     <% else %>
           <p>Coming Soon!</p>
@@ -19,8 +19,8 @@
 
 <div class="skew"></div>
   <div class="projects-container">
-  <% if @face_painting_projects %>
-      <% @face_painting_projects.each do |project| %>
+  <% if @event_projects %>
+      <% @event_projects.each do |project| %>
           <div class="facepaintingExamples">
             <div class="facepaintingImage">
               <%= image_tag project.image.url(:standard), alt: project.title  %>
