@@ -16,27 +16,27 @@ class PostsController < ApplicationController
   end
 
   def about
-    @about_first = Post.where("category = '1' ").first
-    @about_second = Post.where("category = '1' ").second
+    @about_first = Post.where("category = '1' ")
+    @about_second = Post.where("category = '2' ")
   end
 
   def art
-    @art = Post.where("category = '3' ").last
-    @art_projects = Project.where("category = '3' ")
+    @art = Post.where("category = '4' ").last
+    @art_projects = Project.where("category = '4' ")
   end
 
   def puppets
-    @puppets = Post.where("category = '2' ").last
-    @puppets_projects = Project.where("category = '2' ")
+    @puppets = Post.where("category = '3' ").last
+    @puppets_projects = Project.where("category = '3' ")
   end
 
   def events
-    @event = Post.where("category = '4' ").last
-    @event_projects = Project.where("category = '4' ")
+    @event = Post.where("category = '5' ").last
+    @event_projects = Project.where("category = '5' ")
   end
 
   def hire
-    @hire = Post.where("category = '5' ").last
+    @hire = Post.where("category = '6' ").last
   end
 
   def send_inquiry

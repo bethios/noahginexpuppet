@@ -13,22 +13,23 @@
         <% end %>
         <div class="form-group">
           <%= f.label :name %>
-          <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: "Enter name" %>
+          <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: "Enter name", :required => true %>
         </div>
         <div class="form-group">
           <%= f.label :email %>
-          <%= f.email_field :email, class: 'form-control', placeholder: "Enter email" %>
+          <%= f.email_field :email, class: 'form-control', placeholder: "Enter email", :required => true %>
         </div>
         <div class="form-group">
           <%= f.label :password %>
-          <%= f.password_field :password, class: 'form-control', placeholder: "Enter password" %>
+          <%= f.password_field :password, class: 'form-control', placeholder: "Enter password", :required => true %>
         </div>
         <div class="form-group">
           <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Enter password confirmation" %>
+          <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Enter password confirmation", :required => true %>
         </div>
         <div class="form-group">
-          <%= f.submit "Sign up", class: 'btn btn-success' %>
+          <%= f.submit "Update", class: 'btn btn-success' %>
+          <%= link_to "Cancel", admin_path, class: 'btn btn-danger' %>
         </div>
     <% end %>
   </div>

@@ -1,34 +1,38 @@
 @import "variables";
 
 .monster{
-  height: 83vh;
-  overflow: hidden;
+  height: 85vh;
+  overflow: scroll;
+}
+
+.monster-parts{
+  height: 85vh;
+  overflow: scroll;
 }
 
 .monsterBody{
-  height: 80vh;
-  width: 100%;
-  max-height: 1000px;
+  height: 75vh;
+  width: auto;
+  margin: auto;
 }
 
 .break{
-  height: 50px;
+  height: 100px;
 }
 
 .monster-making{
   background-color: white;
-  padding: 30px;
-  height: 80vh;
+  padding: 20px;
+  height: 85vh;
   width: 100%;
-  overflow: scroll;
-  margin: 30px;
+  overflow: hidden;
 }
 
 .draggable{
-  margin: 10%;
   border-radius: 0.75em;
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
+
 }
 
 #drag-me::before {
@@ -37,12 +41,15 @@
 }
 
 .resize-drag {
-  width: 100%;
+  width: 45%;
+  display: inline-block;
   box-sizing: border-box;
+  padding: 15px;
 }
 
 .resize-container {
-  width: 100%;
+  width: 45%;
+  display: inline-block;
   height: 60px;
 }
 
@@ -60,7 +67,7 @@
 }
 
 #drag-8{
-  width: 50%;
+  width: 25%;
 }
 
 .modal{
@@ -68,7 +75,7 @@
   width: 50%;
   text-align: center;
   margin: auto;
-  height: 33%;
+  height: auto;
 }
 
 .difficulty-label{
@@ -219,20 +226,6 @@ h2 {
   border: none;
 }
 
-@media (max-width: 767px){
-  .newspaper{
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 40px; /* Firefox */
-    column-gap: 40px;
-    -webkit-column-rule: 1px solid $color2; /* Chrome, Safari, Opera */
-    -moz-column-rule: 1px solid $color2; /* Firefox */
-    column-rule: 1px solid $color2;
-  }
-}
-
 @media (min-width: 767px){
   .monster{
     height: 83vh;
@@ -240,8 +233,8 @@ h2 {
   }
 
   .monsterBody{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 75vh;
   }
 
   .game{
@@ -263,5 +256,19 @@ h2 {
     background-position: bottom center;
     background-repeat: no-repeat;
   }
+
+  .project-list-item{
+    width: 25%;
+    display: inline-block;
+    margin: 15px;
+  }
+
+  .admin-page{
+    padding: 30px;
+    text-align: center;
+  }
+
+
+
 }
 

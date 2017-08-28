@@ -3,12 +3,16 @@
     <div>
       <% if @event %>
           <h2><%= @event.title %></h2>
-          <%= link_to 'Edit Text', edit_post_path(@event.id), class: 'btn btn-success' %>
+          <% if current_user %>
+            <%= link_to 'Edit Text', edit_post_path(@event.id), class: 'btn btn-success' %>
+          <% end %>
           <p><%= markdown(@event.body) %></p>
           <%= link_to 'Hire Me', hire_path, class: 'btn btn-lg' %>
     <% else %>
           <p>Coming Soon!</p>
-          <%= link_to 'Add Text', new_post_path, class: 'btn btn-success' %>
+          <% if current_user %>
+            <%= link_to 'Add Text', new_post_path, class: 'btn btn-success' %>
+          <% end %>
     <% end %>
     </div>
   </div>

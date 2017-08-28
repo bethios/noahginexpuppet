@@ -4,19 +4,21 @@
   <div class="col-sm-6">
     <div class="content-container">
       <%= form_for @post do |f| %>
-          <div class="form-group">
-            <%= f.label :category %>
-            <%= f.select :category,options_for_select([['About', 1],['Puppets', 2],['Art', 3],['Face Painting', 4],["Hire Me", 5] ],
-                                                      :selected => params[:category]),
-                         class: "form-control"  %>
-          </div>
+          <% if !@post.category %>
+            <div class="form-group">
+              <%= f.label :category %>
+              <%= f.select :category,options_for_select([['About- first', 1],['About- second', 2],['Puppets', 3],['Art', 4],['Face Painting', 5],["Hire Me", 6] ],
+                                                        :selected => params[:category]),
+                           class: "form-control"  %>
+            </div>
+          <% end %>
           <div class="form-group">
             <%= f.label :title%>
-            <%= f.text_field :title, class: "form-control" %>
+            <%= f.text_field :title, class: "form-control", :required => true  %>
           </div>
           <div class="form-group">
             <%= f.label :body %>
-            <%= f.text_area :body, rows: 12, col: 40, class: 'form-control' %>
+            <%= f.text_area :body, rows: 12, col: 40, class: 'form-control', :required => true  %>
           </div>
           <div class="">
             <%= f.submit "Save", class: 'btn btn-success'%>
