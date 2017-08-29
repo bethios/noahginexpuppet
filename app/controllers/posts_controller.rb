@@ -16,8 +16,8 @@ class PostsController < ApplicationController
   end
 
   def about
-    @about_first = Post.where("category = '1' ")
-    @about_second = Post.where("category = '2' ")
+    @about_first = Post.where("category = '1' ").last
+    @about_second = Post.where("category = '2' ").last
   end
 
   def art
