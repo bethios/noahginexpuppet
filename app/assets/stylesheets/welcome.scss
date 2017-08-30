@@ -21,8 +21,8 @@
 }
 
 .monster-making{
-  background-color: white;
-  padding: 20px;
+  background-color: $white;
+  margin: $xl-gap 0;
   height: 85vh;
   width: 100%;
   overflow: hidden;
@@ -44,7 +44,7 @@
   width: 45%;
   display: inline-block;
   box-sizing: border-box;
-  padding: 15px;
+  padding: $small-gap;
 }
 
 .resize-container {
@@ -80,21 +80,21 @@
 
 .difficulty-label{
   font-size: 2em;
-  padding: 15px;
+  padding: $small-gap;
 }
 
 input{
-  margin-bottom: 20px;
+  margin-bottom: $medium-gap;
 }
 
 .controls{
   text-align: center;
-  margin-top: 15px;
+  margin-top: $small-gap;
 }
 
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: $heading-small-font;
   line-height:1;
   margin: 0;
 }
@@ -113,7 +113,7 @@ h2 {
   display:flex;
   flex-wrap:wrap;
   margin:0 auto;
-  padding-bottom: 50px;
+  padding-bottom: $xl-gap;
 }
 
 .hole {
@@ -200,9 +200,9 @@ h2 {
 }
 
 .skew-without-border{
-  -ms-transform: rotate(2deg); /* IE 9 */
-  -webkit-transform: rotate(2deg); /* Safari */
-  transform: rotate(2deg);
+  -ms-transform: $pos-rotate; /* IE 9 */
+  -webkit-transform: $pos-rotate; /* Safari */
+  transform: $pos-rotate;
 }
 
 .gameBoard{
@@ -211,10 +211,10 @@ h2 {
 
 .scoreBoard{
   @extend .skew-without-border;
-  padding: 10px;
+  padding: $small-gap;
   background-color: $color4;
   color: $color1;
-  font-size: 1.25em;
+  font-size: $medium-font;
 }
 
 .whack-a-puppet{
@@ -222,7 +222,7 @@ h2 {
   color: $color4;
   background-color: $color1;
   margin: 0;
-  padding: 10px;
+  padding: $small-gap;
   border: none;
 }
 
@@ -260,15 +260,12 @@ h2 {
   .project-list-item{
     width: 25%;
     display: inline-block;
-    margin: 15px;
+    margin: $small-gap;
   }
 
   .admin-page{
-    padding: 30px;
+    padding: $large-gap;
     text-align: center;
   }
-
-
-
 }
 

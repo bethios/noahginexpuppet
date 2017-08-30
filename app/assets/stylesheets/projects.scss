@@ -5,7 +5,7 @@
   perspective: 1000px;
   background-color: $color4;
   display: inline-block;
-  margin: 10px;
+  margin: $small-gap;
 }
 
 .flip-container:hover{
@@ -25,7 +25,7 @@
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
-  margin: 15px;
+  margin: $small-gap;
 }
 
 .front, .back {
@@ -44,8 +44,8 @@
   transform: rotateY(180deg);
   max-width: 200px;
   height: 200px;
-  background-color: white;
-  padding: 15px;
+  background-color: $white;
+  padding: $small-gap;
   margin: auto;
   text-align: center;
   overflow: scroll;
@@ -69,8 +69,8 @@
 .facepaintingText{
   text-align: center;
   display: inline-block;
-  color:white;
-  padding: 30px;
+  color: $white;
+  padding: $large-gap;
 }
 
 .facepaintingImage{
@@ -79,7 +79,7 @@
 
 .art-sample{
   cursor: pointer;
-  margin: 15px;
+  margin: $small-gap;
   padding: 0;
   position: relative;
   border: $color1 5px solid
@@ -109,7 +109,7 @@
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: $medium-gap;
   position: absolute;
   overflow: scroll;
   top: 50%;
@@ -137,7 +137,7 @@
 @media (min-width: 415px) {
   .projects-container {
     display: grid;
-    margin: 20px;
+    margin: $medium-gap;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -150,7 +150,7 @@
 
 @media (min-width: 1000px){
   .projects-container{
-    margin: 30px;
+    margin: $large-gap;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

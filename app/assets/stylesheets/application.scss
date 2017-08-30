@@ -34,28 +34,28 @@ body{
 }
 
 .mobile-nav i{
-  margin-top: 35px;
+  margin-top: $large-gap;
   float: right;
-  font-size: 2em;
-  padding-right: 20px;
+  font-size: $heading-small-font;
+  padding-right: $medium-gap;
 }
 
 #mobile ul{
   text-align: right;
-  padding-right: 40px;
+  padding-right: $large-gap;
 }
 
 #mobile li{
   text-decoration: none;
   list-style: none;
-  font-size: 1.2em;
+  font-size: $medium-font;
 }
 
 h1{
   display: inline-block;
-  margin: 30px 0 0 20px;
-  font-size: 1.5em;
-  font-weight: 700;
+  margin: $large-gap 0 0 $medium-gap;
+  font-size: $large-font;
+  font-weight: $heavy-weight;
 }
 
 h1 a:hover{
@@ -72,8 +72,8 @@ h1 a:hover{
 }
 
 .mainHeader a{
-  font-size: 2em;
-  padding-left: 20px;
+  font-size: $heading-small-font;
+  padding-left: $medium-gap;
   color: $color2;
 }
 
@@ -86,7 +86,7 @@ h1 a:hover{
   width: 100px;
   overflow: hidden;
   text-align: center;
-  margin-left: 20px;
+  margin-left: $medium-gap;
 }
 
 .hid-box {
@@ -109,13 +109,13 @@ footer{
   background-color: white;
   height: 20vh;
   bottom: 0;
-  padding: 20px;
+  padding: $medium-gap;
   margin-top: 55px;
 }
 
 .social a{
-  font-size: 3em;
-  padding: 20px;
+  font-size: $icon-size;
+  padding: $medium-gap;
   color: $color3;
 }
 
@@ -140,55 +140,54 @@ footer{
 }
 
 .skew{
-  -ms-transform: rotate(2deg); /* IE 9 */
-  -webkit-transform: rotate(2deg); /* Safari */
-  transform: rotate(2deg);
+  -ms-transform: $pos-rotate; /* IE 9 */
+  -webkit-transform: $pos-rotate; /* Safari */
+  transform: $pos-rotate;
   border-top: 3px $color1 solid;
 }
 
 .skew2{
-  -ms-transform: rotate(-2deg); /* IE 9 */
-  -webkit-transform: rotate(-2deg); /* Safari */
-  transform: rotate(-2deg);
+  -ms-transform: $neg-rotate; /* IE 9 */
+  -webkit-transform: $neg-rotate; /* Safari */
+  transform: $neg-rotate;
   border-bottom: 3px $color1 solid;
 }
 
 p{
-  font-size: 1.1em;
-  font-weight: 400;
+  font-size: $small-font;
+  font-weight: $light-weight;
   line-height: 150%;
 }
 
 .inquiry-form{
-  margin-top: 30px;
+  margin-top: $large-gap;
 }
 
-
 .content-container{
-  padding: 10px;
+  padding: $small-gap;
 }
 
 .project-list-title{
-  margin-top: 50px;
+  margin-top: $xl-gap;
 }
 
 
 @media screen and (min-width: 1135px) {
   .content-container{
-    padding: 15px;
-    margin: 30px;
-    background-color: white;
+    padding: $medium-gap;
+    margin: $large-gap;
+    background-color: $white;
   }
 
   .desktop-nav{
     display:block;
     width: 100%;
     height: 125px;
-    background-color: white;
-    -ms-transform: rotate(-2deg); /* IE 9 */
-    -webkit-transform: rotate(-2deg); /* Safari */
-    transform: rotate(-2deg);
-    margin-top: 30px;
+    background-color: $white;
+    -ms-transform: $neg-rotate; /* IE 9 */
+    -webkit-transform: $neg-rotate; /* Safari */
+    transform: $neg-rotate;
+    margin-top: $large-gap;
   }
 
   .desktop-nav ul li{
@@ -204,7 +203,7 @@ p{
 
   .desktop-nav ul{
     float: right;
-    margin: 0 15px 15px 0;
+    margin: 0 $small-gap $small-gap 0;
   }
 
   .desktop-nav ul li a{
@@ -218,8 +217,8 @@ p{
   }
 
   h1{
-    font-size: 2.6em;
-    margin: 60px 0 0 10px;
+    font-size: $heading-font;
+    margin: 59px 0 0 10px;
   }
 
   .nav-image{

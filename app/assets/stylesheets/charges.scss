@@ -6,17 +6,17 @@
 
 .art-types-sale{
   text-align: center;
-  padding-bottom: 25px;
+  padding-bottom: $medium-gap;
 }
 
 .art-sale-text{
   min-height: 75px;
-  padding-top: 15px;
+  padding-top: $small-gap;
 }
 
 @media(max-width: 1000px ){
   .art-types-sale{
     border-bottom: 2px dashed $color4;
-    margin-bottom: 15px;
+    margin-bottom: $small-gap;
   }
 }
