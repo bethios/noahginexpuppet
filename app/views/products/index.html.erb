@@ -1,0 +1,18 @@
+<div class="row">
+  <% @products.each do |product| %>
+      <div class="col-sm-4 art-types-sale">
+        <%= image_tag product.image.url(:standard), alt: product.description %>
+        <p class="art-sale-text"><%= product.description %></p>
+        <p><em>$<%=product.price%></em></p>
+        <%= form_tag charges_path do %>
+            <%= hidden_field_tag :price, product.price %>
+            <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-amount= "<%= product.price %>"
+                    data-name= "<%= product.description %>"
+                    data-description="<%= product.description %>" >
+            </script>
+        <% end %>
+      </div>
+  <% end %>
+</div>

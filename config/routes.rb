@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :products
+
   resources :projects, only: [:new, :create, :destroy, :index]
 
   resources :posts
