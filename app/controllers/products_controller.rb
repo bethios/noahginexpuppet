@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :require_sign_in, except: [:index]
+  before_action :find_product, except: [:new, :create, :index]
 
   def new
     @product = Product.new
@@ -17,11 +18,9 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    find_product
   end
 
   def update
-    find_product
     if @product.update_attributes(product_params)
       flash[:notice] = "Saved!"
       redirect_to admin_path
@@ -32,7 +31,6 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    find_product
     if @product.destroy
       flash[:notice] = "Deleted!"
       redirect_to admin_path
@@ -47,13 +45,12 @@ class ProductsController < ApplicationController
   end
 
   def show
-    find_product
   end
 
   private
 
   def product_params
-    params.require(:product).permit(:description, :price, :active)
+    params.require(:product).permit(:description, :image, :price, :active)
   end
 
   def find_product

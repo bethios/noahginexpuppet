@@ -5,6 +5,7 @@
     <%= link_to "Update Log-in Info", edit_user_path(current_user), :class => 'btn btn-success' %>
     <%= link_to "Sign Out", session_path(current_user), method: :delete, class: 'btn btn-success'  %>
   </div>
+  <%= render partial: 'products/all' %>
 
   <%= render partial: 'projects/all' %>
 </div>

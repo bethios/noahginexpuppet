@@ -23,7 +23,9 @@
   </div>
 </div>
 <div class="skew"></div>
-<%= render partial: 'charges/order' %>
+<div class="row">
+  <%= render partial: 'products/index' %>
+</div>
 <div class="projects-container">
   <% if @art_projects %>
       <% @art_projects.each do |project| %>
