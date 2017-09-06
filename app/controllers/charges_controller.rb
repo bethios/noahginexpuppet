@@ -14,7 +14,6 @@ class ChargesController < ApplicationController
         currency: 'usd'
     )
 
-    flash[:notice] = "Your payment has been received for a watercolor painting."
     redirect_to complete_path
 
     rescue Stripe::CardError => e
@@ -31,6 +30,5 @@ class ChargesController < ApplicationController
   end
 
   def complete
-
   end
 end

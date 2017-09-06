@@ -24,9 +24,9 @@ RSpec.describe PostsController, type: :controller do
       end
     end
 
-    describe "GET face_painting" do
+    describe "GET events" do
       it "returns http success" do
-        get :face_painting, title: face_post.title, body: face_post.body, category: face_post.category
+        get :events, title: face_post.title, body: face_post.body, category: face_post.category
         expect(response).to have_http_status(:success)
       end
     end
@@ -109,9 +109,9 @@ RSpec.describe PostsController, type: :controller do
         expect(response).to have_http_status(:success)
       end
     end
-    describe "GET face_painting" do
+    describe "GET events" do
       it "returns http success" do
-        get :face_painting, title: face_post.title, body: face_post.body, category: face_post.category
+        get :events, title: face_post.title, body: face_post.body, category: face_post.category
         expect(response).to have_http_status(:success)
       end
     end

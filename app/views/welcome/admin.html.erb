@@ -1,8 +1,10 @@
-<div class="content-container text-c">
+<div class="content-container admin-page">
   <h2>Admin page</h2>
-  <div class="content-container">
+  <div>
     <%= link_to "Add Project", new_project_path, class: 'btn btn-success' %>
-    <%= link_to "Update Password", edit_user_path(current_user), :class => 'btn btn-success' %>
+    <%= link_to "Update Log-in Info", edit_user_path(current_user), :class => 'btn btn-success' %>
     <%= link_to "Sign Out", session_path(current_user), method: :delete, class: 'btn btn-success'  %>
   </div>
+
+  <%= render partial: 'projects/all' %>
 </div>

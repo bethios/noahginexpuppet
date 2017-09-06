@@ -2,20 +2,20 @@
 
 table{
   width: 90%;
-  margin: 15px;
-  background-color: white;
+  margin: $small-gap;
+  background-color: $white;
 }
 
 td, th{
   text-align: left;
-  padding: 15px;
-  font-size: 1.25em;
+  padding: $small-gap;
+  font-size: $medium-font;
 }
 
 th {
-  font-size: 1.5em;
+  font-size: $large-font;
   font-weight: bold;
-  border-bottom: 2px slategray solid;
+  border-bottom: 2px $color5 solid;
 }
 
 tr:nth-child(even){
@@ -23,7 +23,7 @@ tr:nth-child(even){
 }
 
 tr:nth-child(odd){
-  background-color: white;
+  background-color: $white;
 }
 
 .parallax {
@@ -33,9 +33,9 @@ tr:nth-child(odd){
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto;
-  -ms-transform: rotate(-2deg); /* IE 9 */
-  -webkit-transform: rotate(-2deg); /* Safari */
-  transform: rotate(-2deg);
+  -ms-transform: $neg-rotate; /* IE 9 */
+  -webkit-transform: $neg-rotate; /* Safari */
+  transform: $neg-rotate;
 }
 
 .parallax1 {
@@ -47,9 +47,9 @@ tr:nth-child(odd){
 .parallax2 {
   @extend .parallax;
   background-image: image_url("snorf.jpg");
-  -ms-transform: rotate(2deg); /* IE 9 */
-  -webkit-transform: rotate(2deg); /* Safari */
-  transform: rotate(2deg);
+  -ms-transform: $pos-rotate; /* IE 9 */
+  -webkit-transform: $pos-rotate; /* Safari */
+  transform: $pos-rotate;
 }
 
 .parallax3 {

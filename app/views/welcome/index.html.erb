@@ -1,19 +1,6 @@
-<div class="modal" id="monsterModal">
-  <div class="modal-header">
-    <a class="close" data-dismiss="modal">×</a>
-    <h3>Welcome!</h3>
-  </div>
-  <div class="modal-body">
-    <p>Scroll over the monster to pick your body. Select your parts, drag them, scale them and create your very own
-      monster!</p>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-  </div>
-</div>
-
-<div class="row monster-making">
-  <div class="col-sm-6">
+<h2 class="skew2">Drag, drop and resize to make your monster!</h2>
+<div class=" monster-making">
+  <div class="col-sm-7">
     <div class="monster">
       <%= image_tag src='puppetBits/body.png', :class => 'monsterBody'%>
       <div class="break"></div>
@@ -22,7 +9,7 @@
       <%= image_tag src='puppetBits/body3.png', :class => 'monsterBody'%>
     </div>
   </div>
-  <div class="col-sm-2 newspaper">
+  <div class="col-sm-5 monster-parts">
     <div id="drag-1" class="resize-container draggable">
       <%= image_tag src='puppetBits/eyelids1.png', :class => "resize-drag" %>
     </div>
@@ -41,8 +28,6 @@
     <div id="drag-11" class="resize-container draggable">
       <%= image_tag src='puppetBits/hair1.png', :class => "resize-drag" %>
     </div>
-  </div>
-  <div class="col-sm-2 newspaper">
     <div id="drag-9" class="resize-container draggable">
       <%= image_tag src='puppetBits/beard1.png', :class => "resize-drag" %>
     </div>
@@ -58,8 +43,6 @@
     <div id="drag-10" class="resize-container draggable">
       <%= image_tag src='puppetBits/clothes1.png', :class => "resize-drag" %>
     </div>
-  </div>
-  <div class="col-sm-2 newspaper">
     <div id="drag-14" class="resize-container draggable">
       <%= image_tag src='puppetBits/mustache1.png', :class => "resize-drag" %>
     </div>

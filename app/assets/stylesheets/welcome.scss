@@ -1,34 +1,38 @@
 @import "variables";
 
 .monster{
-  height: 83vh;
-  overflow: hidden;
+  height: 85vh;
+  overflow: scroll;
+}
+
+.monster-parts{
+  height: 85vh;
+  overflow: scroll;
 }
 
 .monsterBody{
-  height: 80vh;
-  width: 100%;
-  max-height: 1000px;
+  height: 75vh;
+  width: auto;
+  margin: auto;
 }
 
 .break{
-  height: 50px;
+  height: 100px;
 }
 
 .monster-making{
-  background-color: white;
-  padding: 30px;
-  height: 80vh;
+  background-color: $white;
+  margin: $xl-gap 0;
+  height: 85vh;
   width: 100%;
-  overflow: scroll;
-  margin: 30px;
+  overflow: hidden;
 }
 
 .draggable{
-  margin: 10%;
   border-radius: 0.75em;
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
+
 }
 
 #drag-me::before {
@@ -37,12 +41,15 @@
 }
 
 .resize-drag {
-  width: 100%;
+  width: 45%;
+  display: inline-block;
   box-sizing: border-box;
+  padding: $small-gap;
 }
 
 .resize-container {
-  width: 100%;
+  width: 45%;
+  display: inline-block;
   height: 60px;
 }
 
@@ -60,7 +67,7 @@
 }
 
 #drag-8{
-  width: 50%;
+  width: 25%;
 }
 
 .modal{
@@ -68,26 +75,26 @@
   width: 50%;
   text-align: center;
   margin: auto;
-  height: 33%;
+  height: auto;
 }
 
 .difficulty-label{
   font-size: 2em;
-  padding: 15px;
+  padding: $small-gap;
 }
 
 input{
-  margin-bottom: 20px;
+  margin-bottom: $medium-gap;
 }
 
 .controls{
   text-align: center;
-  margin-top: 15px;
+  margin-top: $small-gap;
 }
 
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: $heading-small-font;
   line-height:1;
   margin: 0;
 }
@@ -106,7 +113,7 @@ h2 {
   display:flex;
   flex-wrap:wrap;
   margin:0 auto;
-  padding-bottom: 50px;
+  padding-bottom: $xl-gap;
 }
 
 .hole {
@@ -193,9 +200,9 @@ h2 {
 }
 
 .skew-without-border{
-  -ms-transform: rotate(2deg); /* IE 9 */
-  -webkit-transform: rotate(2deg); /* Safari */
-  transform: rotate(2deg);
+  -ms-transform: $pos-rotate; /* IE 9 */
+  -webkit-transform: $pos-rotate; /* Safari */
+  transform: $pos-rotate;
 }
 
 .gameBoard{
@@ -204,10 +211,10 @@ h2 {
 
 .scoreBoard{
   @extend .skew-without-border;
-  padding: 10px;
+  padding: $small-gap;
   background-color: $color4;
   color: $color1;
-  font-size: 1.25em;
+  font-size: $medium-font;
 }
 
 .whack-a-puppet{
@@ -215,22 +222,8 @@ h2 {
   color: $color4;
   background-color: $color1;
   margin: 0;
-  padding: 10px;
+  padding: $small-gap;
   border: none;
-}
-
-@media (max-width: 767px){
-  .newspaper{
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 40px; /* Firefox */
-    column-gap: 40px;
-    -webkit-column-rule: 1px solid $color2; /* Chrome, Safari, Opera */
-    -moz-column-rule: 1px solid $color2; /* Firefox */
-    column-rule: 1px solid $color2;
-  }
 }
 
 @media (min-width: 767px){
@@ -240,8 +233,8 @@ h2 {
   }
 
   .monsterBody{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 75vh;
   }
 
   .game{
@@ -262,6 +255,17 @@ h2 {
     transition:all 0.6s, background 0s;
     background-position: bottom center;
     background-repeat: no-repeat;
+  }
+
+  .project-list-item{
+    width: 25%;
+    display: inline-block;
+    margin: $small-gap;
+  }
+
+  .admin-page{
+    padding: $large-gap;
+    text-align: center;
   }
 }
 
