@@ -5,14 +5,17 @@
 <div class="content-container post-div">
   <% if @about_first %>
       <h2><%= @about_first.title %></h2>
-      <% if current_user %>
-        <%= link_to 'Edit Text', edit_post_path(@about_first.id), class: 'btn btn-success' %>
-      <% end %>
       <div class="content-container">
+        <% if current_user %>
+            <%= link_to 'Edit Text', edit_post_path(@about_first.id), class: 'btn btn-success' %>
+        <% end %>
         <p><%= markdown(@about_first.body) %></p>
       </div>
   <% else %>
       <p>Coming Soon!</p>
+      <% if current_user %>
+        <%= link_to "New Post", new_post_path, class: 'btn btn-success' %>
+      <% end %>
   <% end %>
 </div>
 <div class="skew"></div>
@@ -23,15 +26,18 @@
 <div class="content-container">
   <% if @about_second %>
       <h2><%= @about_second.title %></h2>
-      <% if current_user %>
-        <%= link_to 'Edit Text', edit_post_path(@about_second.id), class: 'btn btn-success' %>
-      <% end %>
       <div class="content-container">
+        <% if current_user %>
+            <%= link_to 'Edit Text', edit_post_path(@about_second.id), class: 'btn btn-success' %>
+        <% end %>
         <p><%= markdown(@about_second.body) %></p>
       </div>
   <% else %>
       <p>Coming Soon!</p>
-  <% end %>
+      <% if current_user %>
+          <%= link_to "New Post", new_post_path, class: 'btn btn-success' %>
+      <% end %>
+<% end %>
 </div>
 <div class="skew2"></div>
 <div class="parallax3">

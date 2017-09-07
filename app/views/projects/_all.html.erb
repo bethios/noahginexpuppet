@@ -1,12 +1,13 @@
-<h3 class="project-list-title">Projects List</h3>
-
-<% if Project.all %>
-    <% Project.all.each do |project| %>
-        <div class="project-list-item">
-          <%= image_tag project.image.url(:standard), alt: project.title %>
-          <p><%= project.title %></p>
-          <%= link_to "Delete Project", project, method: :delete, class: 'btn btn-danger',
-                      data: { confirm: 'Are you sure you want to delete this project?' }  %>
-        </div>
-    <% end %>
-<% end %>
+<h3 class="admin-title">Projects List</h3>
+<div class="row">
+  <% if Project.all %>
+      <% Project.all.each do |project| %>
+          <div class="admin-list col-sm-3">
+            <%= image_tag project.image.url(:standard), alt: project.title %>
+            <p><%= project.title %></p>
+            <%= link_to "Delete Project", project, method: :delete, class: 'btn btn-danger',
+                        data: { confirm: 'Are you sure you want to delete this project?' }  %>
+          </div>
+      <% end %>
+  <% end %>
+</div>
