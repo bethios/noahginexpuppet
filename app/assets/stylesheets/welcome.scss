@@ -17,11 +17,11 @@
 
 .monster-making{
   background-color: white;
-  padding: 30px;
+  padding: $large-gap;
   height: 80vh;
   width: 100%;
   overflow: scroll;
-  margin: 30px;
+  margin: $large-gap;
 }
 
 .draggable{
@@ -72,22 +72,22 @@
 }
 
 .difficulty-label{
-  font-size: 2em;
-  padding: 15px;
+  font-size: $heading-small-font;
+  padding: $small-gap;
 }
 
 input{
-  margin-bottom: 20px;
+  margin-bottom: $medium-gap;
 }
 
 .controls{
   text-align: center;
-  margin-top: 15px;
+  margin-top: $small-gap;
 }
 
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: $heading-small-font;
   line-height:1;
   margin: 0;
 }
@@ -106,7 +106,7 @@ h2 {
   display:flex;
   flex-wrap:wrap;
   margin:0 auto;
-  padding-bottom: 50px;
+  padding-bottom: $xl-gap;
 }
 
 .hole {
@@ -207,7 +207,7 @@ h2 {
   padding: 10px;
   background-color: $color4;
   color: $color1;
-  font-size: 1.25em;
+  font-size: $medium-font;
 }
 
 .whack-a-puppet{
@@ -217,6 +217,14 @@ h2 {
   margin: 0;
   padding: 10px;
   border: none;
+}
+
+.admin-list{
+  text-align: center;
+}
+
+.admin-title{
+  text-align: center;
 }
 
 @media (max-width: 767px){
