@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2adc580-fd51-4cc9-ae36-5c80e30dcb04" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/welcome.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/welcome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/customPuppet.jpg" afterPath="$PROJECT_DIR$/app/assets/images/customPuppet.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/noah.jpg" afterPath="$PROJECT_DIR$/app/assets/images/noah.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/beard1.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/beard1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/body.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/body.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/body2.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/body2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/body3.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/body3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/bowtie1.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/bowtie1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/clothes1.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/clothes1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/eyelids1.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/eyelids1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/eyes1.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/eyes1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/eyes2.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/eyes2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/glasses1.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/glasses1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/glasses2.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/glasses2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/hair1.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/hair1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/hair2.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/hair2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/horns1.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/horns1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/horns2.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/horns2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/mouth1.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/mouth1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/mouth2.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/mouth2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/mouth3.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/mouth3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/mustache1.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/mustache1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/mustache2.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/mustache2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/puppetBits/nose1.png" afterPath="$PROJECT_DIR$/app/assets/images/puppetBits/nose1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/snorf.jpg" afterPath="$PROJECT_DIR$/app/assets/images/snorf.jpg" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -41,8 +64,8 @@
       <file leaf-file-name="welcome.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/welcome.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+            <state relative-caret-position="541">
+              <caret line="59" column="13" lean-forward="true" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -682,12 +705,12 @@
       <workItem from="1502467413108" duration="3273000" />
       <workItem from="1503948283676" duration="4547000" />
       <workItem from="1504031590145" duration="7143000" />
-      <workItem from="1504633886276" duration="23476000" />
+      <workItem from="1504633886276" duration="23853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183712000" />
+    <option name="totallyTimeSpent" value="184089000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1161,8 +1184,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/welcome.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+        <state relative-caret-position="541">
+          <caret line="59" column="13" lean-forward="true" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
           <folding />
         </state>
       </provider>
