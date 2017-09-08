@@ -53,7 +53,7 @@ div.monster-scroll img {
   position: relative;
   width: 55vw !important;
   top: 5vh;
-  height: 70vh;
+  height: 50vh;
 }
 
 .head-mobile{
@@ -239,11 +239,12 @@ h2 {
   .monster{
     height: 83vh;
     overflow: scroll;
+    text-align: center;
   }
 
   .monsterBody{
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .break{

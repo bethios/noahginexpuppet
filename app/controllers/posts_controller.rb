@@ -64,7 +64,7 @@ class PostsController < ApplicationController
     @post = Post.new
     if @post.update_attributes(post_params)
       flash[:notice] = "Saved!"
-      redirect_to admin_path
+      redirect_to events_path
     else
       flash.now[:alert] = @post.errors.full_messages.to_sentence
       render :new
@@ -79,7 +79,7 @@ class PostsController < ApplicationController
     find_post
     if @post.update_attributes(post_params)
       flash[:notice] = "Saved!"
-      redirect_to admin_path
+      redirect_to events_path
     else
       flash.now[:alert] = @post.errors.full_messages.to_sentence
       render :edit
@@ -91,10 +91,10 @@ class PostsController < ApplicationController
 
     if @post.destroy
       flash[:notice] = "Deleted!"
-      redirect_to admin_path
+      redirect_to events_path
     else
       flash.now[:alert] = @post.errors.full_messages.to_sentence
-      redirect_to admin_path
+      redirect_to events_path
     end
   end
 

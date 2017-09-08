@@ -21,6 +21,10 @@ class ProductsController < ApplicationController
   end
 
   def update
+    if params[:product][:delete_image] == '1'
+      @product.image = nil
+    end
+
     if @product.update_attributes(product_params)
       flash[:notice] = "Saved!"
       redirect_to admin_path

@@ -88,6 +88,9 @@
       <a href="https://www.facebook.com/pages/The-Noah-Ginex-Puppet-Company/93832730848"><i class="ion-social-facebook"></i></a>
       <a href="https://www.youtube.com/user/ColonelErnie"><i class="ion-social-youtube"></i></a>
       <a href="https://twitter.com/JamesonJRalph"><i class="ion-social-twitter"></i></a>
+      <% if current_user %>
+        <%= link_to "Admin", admin_path %>
+      <% end %>
     </div>
     <div class="contact col-sm-6">
 
