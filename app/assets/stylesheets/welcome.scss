@@ -27,13 +27,16 @@ div.monster-scroll img {
 
 .accessories-mobile{
   position: relative;
-  top: -12px;
   overflow: visible;
+}
+
+.mouths-mobile{
+  padding-top: 5vh;
 }
 
 .beard{
   position: relative;
-  top: -55px;
+  top: -9vh;
   width: 50vw !important;
 }
 
@@ -49,12 +52,12 @@ div.monster-scroll img {
 .shirt{
   position: relative;
   width: 55vw !important;
-  top: 30px;
-  height: 50vh;
+  top: 5vh;
+  height: 70vh;
 }
 
 .head-mobile{
-  top: 4vh;
+  top: 4.5vh;
   position: relative;
 }
 
