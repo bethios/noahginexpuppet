@@ -10,7 +10,7 @@
       </div>
       <div class="form-group">
         <%= f.label :image %>
-        <% if @product.image == nil %>
+        <% if @product.image_file_name == nil %>
           <%= f.file_field :image, :required => true  %>
         <% end %>
       </div>

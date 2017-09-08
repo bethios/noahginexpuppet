@@ -1,5 +1,5 @@
 <div class="row">
-  <% Product.all.each do |product| %>
+  <% Product.all.order(:price).each do |product| %>
       <% if product.active %>
         <div class="col-sm-4 art-types-sale">
           <%= image_tag product.image.url(:standard), alt: product.description %>
