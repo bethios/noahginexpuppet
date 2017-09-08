@@ -1,5 +1,5 @@
-<h2 class="skew2">Drag, drop and resize to make your monster!</h2>
 <div class="row monster-making">
+  <h2 class="skew2">Drag, drop and resize to make your monster!</h2>
   <div class="col-sm-6">
     <div class="monster">
       <%= image_tag src='puppetBits/body.png', :class => 'monsterBody'%>
@@ -65,5 +65,31 @@
     <div id="drag-8" class="resize-container draggable">
       <%= image_tag src='puppetBits/nose1.png', :class => "resize-drag nose" %>
     </div>
+    <div id="drag-18" class="resize-container draggable">
+      <%= image_tag src='puppetBits/hair2.png', :class => "resize-drag" %>
+    </div>
+  </div>
+</div>
+
+
+<h2 class="mobile">Swipe left to make your monster</h2>
+<div class="mobile-monster">
+  <div class="head-mobile monster-scroll">
+    <%= image_tag src='puppetBits/horns2.png' %>
+    <%= image_tag src='puppetBits/hair1.png', :class => "hair" %>
+  </div>
+  <div class="eyes-mobile monster-scroll">
+    <%= image_tag src='puppetBits/eyes1.png' %>
+    <%= image_tag src='puppetBits/eyes2.png' %>
+  </div>
+  <div class="mouths-mobile monster-scroll">
+    <%= image_tag src='puppetBits/mouth2.png' %>
+    <%= image_tag src='puppetBits/mouth1.png' %>
+    <%= image_tag src='puppetBits/mouth3.png' %>
+  </div>
+  <div class="accessories-mobile monster-scroll">
+    <%= image_tag src='puppetBits/bowtie1.png', :class => 'bowtie'  %>
+    <%= image_tag src='puppetBits/beard1.png', :class => 'beard' %>
+    <%= image_tag src='puppetBits/clothes1.png', :class => 'shirt'  %>
   </div>
 </div>

@@ -1,74 +1,61 @@
 @import "variables";
 
-.monster{
-  height: 83vh;
-  overflow: hidden;
-}
-
-.monsterBody{
-  height: 80vh;
-  width: 100%;
-  max-height: 1000px;
-}
-
-.break{
-  height: 50px;
-}
-
 .monster-making{
-  background-color: white;
-  padding: $large-gap;
+  display: none;
+}
+
+div.mobile-monster{
+  background: image_url('puppetBits/body-mobile.png') no-repeat;
+  background-size: contain;
+  background-position: center;
   height: 80vh;
-  width: 100%;
-  overflow: scroll;
-  margin: $large-gap;
 }
 
-.draggable{
-  margin: 10%;
-  border-radius: 0.75em;
-  -webkit-transform: translate(0px, 0px);
-  transform: translate(0px, 0px);
+div.monster-scroll {
+  overflow: auto;
+  white-space: nowrap;
 }
 
-#drag-me::before {
-  content: "#" attr(id);
-  font-weight: bold;
-}
-
-.resize-drag {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.resize-container {
-  width: 100%;
-  height: 60px;
-}
-
-.draggable img{
-  width: 100%;
-  position: static;
-}
-
-.col-sm-8{
-  z-index: 0;
-}
-
-.col-sm-2{
-  z-index: 1;
-}
-
-#drag-8{
-  width: 50%;
-}
-
-.modal{
-  background-color: rgba(255,255, 255, 0.70);
-  width: 50%;
+div.monster-scroll img {
+  display: inline-block;
   text-align: center;
-  margin: auto;
-  height: 33%;
+  z-index: 2;
+  height: auto;
+  width: 40vw;
+  margin: 0 29vw;
+}
+
+.accessories-mobile{
+  position: relative;
+  top: -12px;
+  overflow: visible;
+}
+
+.beard{
+  position: relative;
+  top: -55px;
+  width: 50vw !important;
+}
+
+.bowtie{
+  position: relative;
+  top: -25px;
+}
+
+.hair{
+  width: 70vw !important;
+}
+
+.shirt{
+  position: relative;
+  width: 55vw !important;
+  top: 30px;
+  height: 50vh;
+}
+
+.head-mobile{
+  top: 4vh;
+  position: relative;
 }
 
 .difficulty-label{
@@ -242,6 +229,10 @@ h2 {
 }
 
 @media (min-width: 767px){
+  .mobile-monster{
+    display: none;
+  }
+
   .monster{
     height: 83vh;
     overflow: scroll;
@@ -250,5 +241,62 @@ h2 {
   .monsterBody{
     width: 100%;
     height: auto;
+  }
+
+  .break{
+    height: 50px;
+  }
+
+  .monster-making{
+    display: block;
+    background-color: white;
+    padding: $large-gap;
+    height: 80vh;
+    width: 100%;
+    overflow: scroll;
+    margin: $large-gap;
+  }
+
+  .draggable{
+    margin: 10%;
+    border-radius: 0.75em;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+
+  #drag-me::before {
+    content: "#" attr(id);
+    font-weight: bold;
+  }
+
+  .resize-drag {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .resize-container {
+    width: 100%;
+    height: 60px;
+  }
+
+  .draggable img{
+    width: 100%;
+    position: static;
+  }
+
+  .col-sm-8{
+    z-index: 0;
+  }
+
+  .col-sm-2{
+    z-index: 1;
+  }
+
+  #drag-8{
+    width: 50%;
+  }
+
+  .mobile{
+    display: none;
   }
 }
