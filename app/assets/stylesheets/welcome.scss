@@ -1,6 +1,6 @@
 @import "variables";
 
-.monster-making{
+.monster-making, .desktop{
   display: none;
 }
 
@@ -245,6 +245,10 @@ h2 {
 
   .break{
     height: 50px;
+  }
+
+  .desktop{
+    display: block;
   }
 
   .monster-making{
