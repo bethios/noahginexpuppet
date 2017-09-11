@@ -100,7 +100,7 @@ function getRandomHole(holes){
 }
 
 function peep(){
-    var time = generateRandomTime(400, 1100);
+    var time = generateRandomTime(600, 1200);
     var hole = getRandomHole(holes);
     hole.classList.add('up');
     setTimeout(function(){
@@ -126,6 +126,6 @@ function bonk(e) {
     setTimeout(function(){
         mole.classList.remove('up');
         mole.classList.remove('bonked');
-    }, 300);
+    }, 400);
     document.getElementsByClassName('score')[0].innerHTML = score
 }
