@@ -97,10 +97,12 @@ h2 {
   flex-wrap:wrap;
   margin:0 auto;
   padding-bottom: $xl-gap;
+  max-width: 90vw;
+
 }
 
 .hole {
-  flex: 1 0 33.33%;
+  flex: 1 0 50%;
   overflow: hidden;
   position: relative;
 }
@@ -179,7 +181,7 @@ h2 {
 }
 
 .hole.up .mole {
-  top:0;
+  top: -20px;
 }
 
 .skew-without-border{
@@ -306,5 +308,15 @@ h2 {
 
   .mobile{
     display: none;
+  }
+
+  .hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hole.up .mole {
+    top: 0;
   }
 }
