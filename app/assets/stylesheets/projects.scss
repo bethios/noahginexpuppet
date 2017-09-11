@@ -51,7 +51,7 @@
   overflow: scroll;
 }
 
-.facepaintingExamples{
+.eventsExamples{
   @extend .content-container;
   width: 230px;
   height: 230px;
@@ -62,18 +62,18 @@
   overflow: hidden;
   }
 
-.facepaintingExamples:hover {
+.eventsExamples:hover {
   width: 445px;
 }
 
-.facepaintingText{
+.eventsText{
   text-align: center;
   display: inline-block;
   color: $white;
   padding: $large-gap;
 }
 
-.facepaintingImage{
+.eventsImage{
   display:inline-block;
 }
 
@@ -108,7 +108,7 @@
 }
 
 .text {
-  color: white;
+  color: $white;
   font-size: $medium-gap;
   position: absolute;
   overflow: scroll;

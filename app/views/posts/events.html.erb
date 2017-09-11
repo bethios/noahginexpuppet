@@ -25,14 +25,16 @@
   <div class="projects-container">
   <% if @event_projects %>
       <% @event_projects.each do |project| %>
-          <div class="facepaintingExamples">
-            <div class="facepaintingImage">
+          <div class="eventsExamples">
+            <div class="eventsImage">
               <%= image_tag project.image.url(:standard), alt: project.title  %>
             </div>
-            <div class="facepaintingText">
+            <div class="eventsText">
               <p><%= project.title %></p>
-              <%= link_to "Delete Project", project, method: :delete, class: 'btn btn-danger',
+              <% if current_user %>
+                <%= link_to "Delete Project", project, method: :delete, class: 'btn btn-danger',
                           data: { confirm: 'Are you sure you want to delete this project?' }  %>
+              <% end %>
             </div>
           </div>
 
